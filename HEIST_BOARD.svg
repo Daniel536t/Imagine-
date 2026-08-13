@@ -1,135 +1,140 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
-  <title id="title">MMT V3 Core Security Heist Board</title>
-  <desc id="desc">A top-down illustrated bank showing the Sui Move protocol objects, security perimeter, alarms, math machinery, and audit routes.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="1900" viewBox="0 0 2600 1900" role="img" aria-labelledby="title desc">
+  <title id="title">MMT V3 Core — Protocol Security Floor Plan</title>
+  <desc id="desc">A large chess-style top-down building map of the MMT V3 Sui Move protocol, showing rooms, corridors, assets, controls, cameras, alarms, guards, and audit routes.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10182b"/><stop offset="1" stop-color="#070b16"/></linearGradient>
-    <linearGradient id="bank" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#273653"/><stop offset="1" stop-color="#19243a"/></linearGradient>
-    <linearGradient id="vault" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a3424"/><stop offset="1" stop-color="#241a18"/></linearGradient>
-    <linearGradient id="control" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#263c51"/><stop offset="1" stop-color="#172936"/></linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".45"/></filter>
-    <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="floor" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity=".035"/></pattern>
-    <pattern id="fence" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M0 0L24 24M24 0L0 24" stroke="#f0b34d" stroke-opacity=".34" stroke-width="2"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1628"/><stop offset="1" stop-color="#050914"/></linearGradient>
+    <linearGradient id="building" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#31435f"/><stop offset="1" stop-color="#17243a"/></linearGradient>
+    <linearGradient id="vault" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#574027"/><stop offset="1" stop-color="#22191a"/></linearGradient>
+    <linearGradient id="control" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#29475a"/><stop offset="1" stop-color="#152b3b"/></linearGradient>
+    <pattern id="floor" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="2"/></pattern>
+    <pattern id="yard" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M0 36L36 0M-9 36L36-9M0 45L45 0" stroke="#d8a550" stroke-opacity=".16" stroke-width="2"/></pattern>
+    <pattern id="chess" width="88" height="88" patternUnits="userSpaceOnUse"><rect width="44" height="44" fill="#253957"/><rect x="44" y="44" width="44" height="44" fill="#253957"/><rect x="44" width="44" height="44" fill="#1d2d48"/><rect y="44" width="44" height="44" fill="#1d2d48"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity=".52"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#76b9ff"/></marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ffd05d"/></marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff6670"/></marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#48e0af"/></marker>
+    <symbol id="cop" viewBox="-30 -38 60 76"><circle cy="-5" r="18" class="guard"/><path d="M-12 30Q0 5 12 30M-15-12H15" fill="none" stroke="#ffe0c8" stroke-width="5"/><rect x="-10" y="-31" width="20" height="8" rx="3" fill="#8fc1ff"/></symbol>
+    <symbol id="camera" viewBox="-30 -30 60 60"><path d="M-22-10h27l12 10-12 10h-27z" class="camera"/><circle cx="-8" r="6" fill="#e7fcff"/><path d="M-24-18L-32-26M-24 18L-32 26" stroke="#8eeeff" stroke-width="3"/></symbol>
+    <symbol id="alarm" viewBox="-45 -45 90 90"><path d="M0-26L-27 22H27Z" class="alarm"/><circle cy="-2" r="7" fill="#fff1a5"/><path d="M-38-33Q0-65 38-33M-45-49Q0-88 45-49" fill="none" stroke="#ff6a70" stroke-width="4"/></symbol>
+    <symbol id="door" viewBox="0 0 70 30"><path d="M2 28V2h66v26" fill="none" stroke="#f8d17b" stroke-width="5"/><path d="M8 26L35 4M62 26L35 4" fill="none" stroke="#f8d17b" stroke-width="3"/></symbol>
+    <symbol id="route-dot" viewBox="-18 -18 36 36"><circle r="14" fill="#071323" stroke="currentColor" stroke-width="4"/><circle r="5" fill="currentColor"/></symbol>
     <style>
-      text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;fill:#edf3ff}
-      .title{font-size:29px;font-weight:800;letter-spacing:2px}
-      .subtitle{font-size:14px;fill:#99acd0;letter-spacing:1px}
-      .room-title{font-size:16px;font-weight:800;letter-spacing:1px}
-      .label{font-size:13px;font-weight:700}
-      .small{font-size:11px;fill:#b8c7df}
-      .tiny{font-size:10px;fill:#9eafd0}
-      .number{font-size:12px;font-weight:900;fill:#07101e}
-      .paper{fill:#f5e8c8;stroke:#d5b873;stroke-width:2}
-      .paper-text{font-size:11px;fill:#362b1d;font-weight:700}
-      .line{stroke:#75a7e8;stroke-width:2;fill:none;stroke-dasharray:8 7;opacity:.72}
-      .guard{fill:#d85863;stroke:#ffb1a7;stroke-width:2}
-      .alarm{fill:#ff5d66;stroke:#ffd1a7;stroke-width:2}
-      .safe{fill:#39c79a;stroke:#a3ffe0;stroke-width:2}
-      .blue{fill:#2f6eb7;stroke:#8ac7ff;stroke-width:2}
-      .gold{fill:#cc8a35;stroke:#ffd584;stroke-width:2}
-      .purple{fill:#7050b4;stroke:#c5a9ff;stroke-width:2}
-      .cyan{fill:#197f91;stroke:#84f0ff;stroke-width:2}
-      .room{stroke:#7d9bc7;stroke-width:2}
+      text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;fill:#edf4ff}
+      .headline{font-size:38px;font-weight:900;letter-spacing:3px}.subhead{font-size:16px;fill:#9eb2d6;letter-spacing:1.4px}
+      .section{font-size:19px;font-weight:900;letter-spacing:1.5px}.room-title{font-size:17px;font-weight:900;letter-spacing:1px}
+      .label{font-size:14px;font-weight:800}.small{font-size:12px;fill:#b9c9e2}.tiny{font-size:11px;fill:#9eafd0}.micro{font-size:10px;fill:#8fa5ca}
+      .paper-text{font-size:12px;fill:#352b1d;font-weight:800}.paper{fill:#f6e9c9;stroke:#d5b873;stroke-width:3}
+      .wall{fill:#16243a;stroke:#8ba9d3;stroke-width:3}.room{stroke:#7899c7;stroke-width:2}.corridor{fill:#182b46;stroke:#6689b9;stroke-width:2}
+      .vault-room{fill:url(#vault);stroke:#e9bc62;stroke-width:4}.control-room{fill:url(#control);stroke:#7ed8ec;stroke-width:3}
+      .guard{fill:#db5966;stroke:#ffc0b2;stroke-width:2}.alarm{fill:#ff5b68;stroke:#ffd1a3;stroke-width:2}.camera{fill:#247c9d;stroke:#9af5ff;stroke-width:2}
+      .asset{fill:#39c99d;stroke:#a8ffe2;stroke-width:2}.cap{fill:#c88a34;stroke:#ffdc88;stroke-width:2}.config{fill:#1e7e91;stroke:#8eefff;stroke-width:2}.position{fill:#7252b5;stroke:#d0baff;stroke-width:2}.token{fill:#2b6db4;stroke:#98d2ff;stroke-width:2}
+      .route-a{fill:none;stroke:#48e0af;stroke-width:8;stroke-dasharray:20 11;marker-end:url(#arrow-green);opacity:.9}.route-b{fill:none;stroke:#ffd05d;stroke-width:8;stroke-dasharray:18 10;marker-end:url(#arrow-gold);opacity:.9}.route-c{fill:none;stroke:#ff6670;stroke-width:8;stroke-dasharray:18 10;marker-end:url(#arrow-red);opacity:.9}.route-d{fill:none;stroke:#76b9ff;stroke-width:8;stroke-dasharray:18 10;marker-end:url(#arrow-blue);opacity:.9}.route-e{fill:none;stroke:#d09aff;stroke-width:8;stroke-dasharray:18 10;opacity:.9}.route-f{fill:none;stroke:#ff9b55;stroke-width:8;stroke-dasharray:18 10;opacity:.9}.route-g{fill:none;stroke:#ecf4ff;stroke-width:6;stroke-dasharray:9 13;opacity:.8}
+      .route-letter{font-size:15px;font-weight:900;fill:#071323}.north{font-size:20px;font-weight:900;fill:#ffd36b}.grid-label{font-size:13px;font-weight:800;fill:#7894bb}
     </style>
   </defs>
-
-  <rect width="1600" height="1100" fill="url(#bg)"/>
-  <rect x="26" y="24" width="1548" height="1052" rx="24" fill="none" stroke="#32415f" stroke-width="2"/>
-  <text x="70" y="75" class="title">MMT V3 CORE · SECURITY HEIST BOARD</text>
-  <text x="70" y="101" class="subtitle">SUI MOVE CLMM  |  LOCAL REVIEW  |  VECTOR MAP OF ASSETS, GUARDS, CAMERAS, AND ATTACK ROUTES</text>
-  <rect x="1260" y="50" width="260" height="58" rx="12" fill="#17243b" stroke="#52698d"/>
-  <text x="1280" y="76" class="small">STATUS</text><text x="1280" y="96" class="label" fill="#ffd584">BASELINE: CLMM 364/364</text>
-
-  <!-- outer perimeter -->
-  <rect x="62" y="135" width="1476" height="860" rx="26" fill="url(#fence)" stroke="#d49a43" stroke-width="4" stroke-dasharray="12 8"/>
-  <text x="82" y="161" class="room-title" fill="#ffd584">① OUTSIDE PERIMETER · DEPLOYMENT &amp; TRUST BOUNDARY</text>
-  <text x="82" y="184" class="small">The source repository, published package metadata, object ownership, and every entry path into the shared pool.</text>
-
-  <!-- cops around outside -->
-  <g transform="translate(118 225)"><circle r="19" class="guard"/><path d="M-9 25Q0 5 9 25M-13-8H13" stroke="#ffd9c4" stroke-width="4" fill="none"/><rect x="-8" y="-27" width="16" height="7" rx="3" fill="#87b5ed"/><text x="-30" y="49" class="small">COP · ACL</text></g>
-  <g transform="translate(1470 225)"><circle r="19" class="guard"/><path d="M-9 25Q0 5 9 25M-13-8H13" stroke="#ffd9c4" stroke-width="4" fill="none"/><rect x="-8" y="-27" width="16" height="7" rx="3" fill="#87b5ed"/><text x="-45" y="49" class="small">COP · VERSION</text></g>
-  <g transform="translate(118 905)"><circle r="19" class="guard"/><path d="M-9 25Q0 5 9 25M-13-8H13" stroke="#ffd9c4" stroke-width="4" fill="none"/><rect x="-8" y="-27" width="16" height="7" rx="3" fill="#87b5ed"/><text x="-32" y="49" class="small">COP · POOL ID</text></g>
-  <g transform="translate(1470 905)"><circle r="19" class="guard"/><path d="M-9 25Q0 5 9 25M-13-8H13" stroke="#ffd9c4" stroke-width="4" fill="none"/><rect x="-8" y="-27" width="16" height="7" rx="3" fill="#87b5ed"/><text x="-48" y="49" class="small">COP · SLIPPAGE</text></g>
-
-  <!-- alarm towers -->
-  <g transform="translate(245 220)" filter="url(#glow)"><path d="M0-25L-24 19H24Z" class="alarm"/><circle cy="-3" r="6" fill="#fff0b0"/><path d="M-34-34Q0-60 34-34M-42-48Q0-82 42-48" fill="none" stroke="#ff6c68" stroke-width="3"/><text x="-49" y="44" class="small">ALARM · ASSERTS</text></g>
-  <g transform="translate(1345 220)" filter="url(#glow)"><path d="M0-25L-24 19H24Z" class="alarm"/><circle cy="-3" r="6" fill="#fff0b0"/><path d="M-34-34Q0-60 34-34M-42-48Q0-82 42-48" fill="none" stroke="#ff6c68" stroke-width="3"/><text x="-62" y="44" class="small">ALARM · REENTRANCY</text></g>
-
-  <!-- deployment dossier -->
-  <g transform="translate(290 205)" filter="url(#shadow)"><rect width="240" height="92" rx="8" class="paper" transform="rotate(-3)"/><text x="15" y="25" class="paper-text">DEPLOYMENT DOSSIER</text><text x="15" y="47" class="paper-text">mmt_v3: 0xcf60…c1d1</text><text x="15" y="65" class="paper-text">slippage_check: 0xbccb…dbb0</text><text x="15" y="83" class="paper-text">⚠ published/source drift route</text></g>
-
-  <!-- bank -->
-  <rect x="250" y="315" width="1100" height="590" rx="22" fill="url(#bank)" stroke="#a9c2eb" stroke-width="3" filter="url(#shadow)"/>
-  <rect x="250" y="315" width="1100" height="590" rx="22" fill="url(#floor)"/>
-  <text x="285" y="350" class="title" font-size="22">② THE BANK · mmt_v3 SHARED OBJECT SYSTEM</text>
-  <text x="285" y="373" class="small">Every room below is a module, state object, guard, or accounting path identified in the source.</text>
-
-  <!-- front security -->
-  <rect x="285" y="400" width="220" height="180" rx="12" fill="url(#control)" class="room"/>
-  <text x="305" y="430" class="room-title">SECURITY LOBBY</text>
-  <circle cx="322" cy="465" r="17" class="gold"/><text x="317" y="470" class="number">A</text><text x="350" y="470" class="label">AdminCap</text>
-  <circle cx="322" cy="500" r="17" class="gold"/><text x="317" y="505" class="number">G</text><text x="350" y="505" class="label">Acl</text>
-  <circle cx="322" cy="535" r="17" class="purple"/><text x="317" y="540" class="number">V</text><text x="350" y="540" class="label">VersionCap / Version</text>
-  <text x="305" y="563" class="tiny">admin.move · version.move</text>
-
-  <!-- global config -->
-  <rect x="530" y="400" width="220" height="180" rx="12" fill="url(#control)" class="room"/>
-  <text x="550" y="430" class="room-title">RATE CONTROL</text>
-  <rect x="565" y="455" width="58" height="43" rx="6" class="cyan"/><text x="580" y="482" class="label">CFG</text><text x="640" y="470" class="label">GlobalConfig</text><text x="640" y="489" class="small">fee rates</text>
-  <path d="M575 525h125M575 540h95M575 555h110" stroke="#8ee8f4" stroke-width="4" opacity=".7"/><text x="550" y="570" class="tiny">global_config.move · constants.move</text>
-
-  <!-- central vault -->
-  <rect x="775" y="400" width="330" height="235" rx="16" fill="url(#vault)" stroke="#edbd62" stroke-width="3"/>
-  <text x="800" y="432" class="room-title" fill="#ffd584">③ MAIN VAULT · Pool&lt;X,Y&gt;</text>
-  <circle cx="940" cy="520" r="72" fill="#33241e" stroke="#e5af50" stroke-width="8"/><circle cx="940" cy="520" r="52" fill="none" stroke="#a76c31" stroke-width="4"/><path d="M940 468v104M888 520h104" stroke="#a76c31" stroke-width="4"/><text x="898" y="615" class="label" fill="#ffd584">Pool state</text>
-  <rect x="800" y="458" width="112" height="45" rx="7" class="blue"/><text x="822" y="486" class="label">TOKEN X</text><text x="805" y="520" class="tiny">reserve_x · fee_x</text>
-  <rect x="968" y="458" width="112" height="45" rx="7" class="blue"/><text x="990" y="486" class="label">TOKEN Y</text><text x="973" y="520" class="tiny">reserve_y · fee_y</text>
-  <text x="800" y="650" class="tiny">pool.move · add_to_reserves · take_from_reserves</text>
-
-  <!-- positions -->
-  <rect x="1130" y="400" width="190" height="235" rx="12" fill="#30344c" class="room"/>
-  <text x="1150" y="430" class="room-title">LOCKER ROOM</text>
-  <rect x="1155" y="455" width="140" height="65" rx="7" class="purple"/><text x="1188" y="483" class="label">Position</text><text x="1168" y="503" class="tiny">liquidity · ticks</text>
-  <rect x="1155" y="540" width="140" height="45" rx="7" class="purple"/><text x="1170" y="568" class="label">RewardInfo</text>
-  <text x="1148" y="615" class="tiny">position.move</text>
-
-  <!-- lower rooms -->
-  <rect x="285" y="665" width="245" height="200" rx="12" fill="#283b46" class="room"/>
-  <text x="305" y="695" class="room-title">TRADING FLOOR</text>
-  <path d="M325 730h165M325 750h120M325 770h145" stroke="#91e4db" stroke-width="5" opacity=".65"/>
-  <text x="305" y="810" class="label">SwapState</text><text x="305" y="831" class="label">SwapStepComputations</text><text x="305" y="852" class="tiny">trade.move · swap math</text>
-
-  <rect x="555" y="665" width="235" height="200" rx="12" fill="#30344c" class="room"/>
-  <text x="575" y="695" class="room-title">FLASH DESK</text>
-  <rect x="590" y="730" width="88" height="53" rx="7" class="gold"/><text x="604" y="761" class="label">LOAN</text><text x="695" y="751" class="label">FlashLoanReceipt</text><text x="695" y="770" class="tiny">repay exactly once</text>
-  <rect x="590" y="800" width="88" height="38" rx="7" class="gold"/><text x="603" y="825" class="label">SWAP</text><text x="695" y="823" class="label">FlashSwapReceipt</text>
-
-  <rect x="815" y="665" width="235" height="200" rx="12" fill="#3d3245" class="room"/>
-  <text x="835" y="695" class="room-title">REWARD CUSTODY</text>
-  <rect x="850" y="730" width="165" height="45" rx="7" class="safe"/><text x="873" y="758" class="label">PoolRewardInfo</text>
-  <rect x="850" y="790" width="165" height="45" rx="7" class="safe"/><text x="869" y="818" class="label">Custodian DF</text>
-  <text x="835" y="854" class="tiny">admin / collect paths</text>
-
-  <rect x="1075" y="665" width="245" height="200" rx="12" fill="#28394f" class="room"/>
-  <text x="1095" y="695" class="room-title">ORACLE &amp; TICK ROOM</text>
-  <circle cx="1130" cy="745" r="25" class="cyan"/><text x="1117" y="751" class="label">OBS</text><text x="1170" y="744" class="label">Observation</text>
-  <rect x="1105" y="785" width="72" height="38" rx="6" class="cyan"/><text x="1114" y="810" class="label">TICKS</text><text x="1190" y="810" class="label">TickInfo</text>
-  <text x="1095" y="850" class="tiny">bitmap · spacing · boundaries</text>
-
-  <!-- entry/exit arrows -->
-  <path d="M800 990V910" class="line"/><path d="M792 922l8-15 8 15" fill="#75a7e8"/>
-  <text x="715" y="1022" class="room-title">AUTHORIZED ENTRY · transaction context + owned capabilities</text>
-  <path d="M1335 580H1500V700" class="line"/><text x="1355" y="565" class="small">audit routes</text>
-
-  <!-- investigation cards -->
-  <g transform="translate(1180 205)" filter="url(#shadow)"><rect width="240" height="100" rx="8" class="paper" transform="rotate(4)"/><text x="18" y="27" class="paper-text">OPEN ROUTES</text><text x="18" y="48" class="paper-text">1 · CASHIER MISMATCH</text><text x="18" y="66" class="paper-text">2 · RECEIPT REPLAY</text><text x="18" y="84" class="paper-text">3 · TICK / ORACLE EDGE</text></g>
-
-  <!-- bottom legend -->
-  <rect x="82" y="1020" width="1456" height="35" rx="8" fill="#111d31" stroke="#3d5378"/>
-  <circle cx="108" cy="1037" r="8" class="safe"/><text x="124" y="1042" class="small">asset / custody</text>
-  <circle cx="260" cy="1037" r="8" class="gold"/><text x="276" y="1042" class="small">capability / fee control</text>
-  <circle cx="470" cy="1037" r="8" class="cyan"/><text x="486" y="1042" class="small">oracle / configuration</text>
-  <circle cx="680" cy="1037" r="8" class="purple"/><text x="696" y="1042" class="small">position / version</text>
-  <circle cx="865" cy="1037" r="8" class="alarm"/><text x="881" y="1042" class="small">alarm / invariant</text>
-  <rect x="1045" y="1029" width="18" height="15" class="paper"/><text x="1074" y="1042" class="small">audit note / deployment evidence</text>
+  <rect width="2600" height="1900" fill="url(#bg)"/>
+  <rect x="28" y="28" width="2544" height="1844" rx="28" fill="none" stroke="#354866" stroke-width="3"/>
+  <text x="74" y="78" class="headline">MMT V3 CORE · PROTOCOL SECURITY FLOOR PLAN</text>
+  <text x="74" y="108" class="subhead">CHESS-STYLE AUDIT MAP  ·  TOP-DOWN BUILDING LAYOUT  ·  ROOMS, ROUTES, CAMERAS, ALARMS, AND STATE OBJECTS</text>
+  <rect x="2050" y="49" width="440" height="74" rx="14" fill="#15253d" stroke="#627da6" stroke-width="2"/>
+  <text x="2080" y="78" class="small">REVIEW STATUS</text><text x="2080" y="105" class="label" fill="#ffd36b">CLMM BASELINE · 364 / 364 PASSED</text>
+  <rect x="70" y="150" width="2460" height="1480" rx="24" fill="url(#yard)" stroke="#d19b45" stroke-width="5" stroke-dasharray="16 10"/>
+  <text x="98" y="185" class="section" fill="#ffd36b">A · OUTER PERIMETER / APPROACH BOARD</text>
+  <text x="98" y="212" class="small">The perimeter is the trust boundary: deployment metadata, package identity, owned capabilities, shared objects, and transaction entry points.</text>
+  <path d="M2380 240v70M2345 275h70" stroke="#ffd36b" stroke-width="4"/><text x="2368" y="230" class="north">N</text>
+  <g opacity=".75">
+    <path d="M160 250V1550M360 250V1550M560 250V1550M760 250V1550M960 250V1550M1160 250V1550M1360 250V1550M1560 250V1550M1760 250V1550M1960 250V1550M2160 250V1550M2360 250V1550" stroke="#d8b05c" stroke-opacity=".2" stroke-width="2"/>
+    <path d="M130 290H2470M130 490H2470M130 690H2470M130 890H2470M130 1090H2470M130 1290H2470M130 1490H2470" stroke="#d8b05c" stroke-opacity=".2" stroke-width="2"/>
+    <text x="150" y="245" class="grid-label">A</text><text x="350" y="245" class="grid-label">B</text><text x="550" y="245" class="grid-label">C</text><text x="750" y="245" class="grid-label">D</text><text x="950" y="245" class="grid-label">E</text><text x="1150" y="245" class="grid-label">F</text><text x="1350" y="245" class="grid-label">G</text><text x="1550" y="245" class="grid-label">H</text><text x="1750" y="245" class="grid-label">I</text><text x="1950" y="245" class="grid-label">J</text><text x="2150" y="245" class="grid-label">K</text><text x="2350" y="245" class="grid-label">L</text>
+    <text x="105" y="305" class="grid-label">1</text><text x="105" y="505" class="grid-label">2</text><text x="105" y="705" class="grid-label">3</text><text x="105" y="905" class="grid-label">4</text><text x="105" y="1105" class="grid-label">5</text><text x="105" y="1305" class="grid-label">6</text><text x="105" y="1505" class="grid-label">7</text>
+  </g>
+  <rect x="105" y="230" width="2370" height="70" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text x="130" y="274" class="label">NORTH SERVICE ROAD · deployment / package metadata approach</text>
+  <rect x="105" y="1510" width="2370" height="70" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text x="130" y="1554" class="label">SOUTH SERVICE ROAD · authorized transaction approach / audit exit</text>
+  <rect x="105" y="310" width="70" height="1180" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text transform="translate(148 1390) rotate(-90)" class="label">WEST ROAD · owned objects / capability route</text>
+  <rect x="2405" y="310" width="70" height="1180" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text transform="translate(2448 1390) rotate(-90)" class="label">EAST ROAD · receipt / observation route</text>
+  <use href="#cop" x="220" y="335" width="60" height="76"/><text x="184" y="425" class="tiny">COP-01 ACL</text>
+  <use href="#cop" x="2270" y="335" width="60" height="76"/><text x="2234" y="425" class="tiny">COP-02 VERSION</text>
+  <use href="#cop" x="220" y="1390" width="60" height="76"/><text x="180" y="1480" class="tiny">COP-03 POOL-ID</text>
+  <use href="#cop" x="2270" y="1390" width="60" height="76"/><text x="2226" y="1480" class="tiny">COP-04 SLIPPAGE</text>
+  <use href="#alarm" x="400" y="335" width="90" height="90"/><text x="350" y="438" class="tiny">ALARM-01 ASSERTS</text>
+  <use href="#alarm" x="2110" y="335" width="90" height="90"/><text x="2055" y="438" class="tiny">ALARM-02 RECEIPT</text>
+  <use href="#camera" x="690" y="335" width="60" height="60"/><text x="654" y="410" class="tiny">CAM-01</text>
+  <use href="#camera" x="1830" y="335" width="60" height="60"/><text x="1794" y="410" class="tiny">CAM-02</text>
+  <use href="#camera" x="690" y="1410" width="60" height="60"/><text x="654" y="1490" class="tiny">CAM-07</text>
+  <use href="#camera" x="1830" y="1410" width="60" height="60"/><text x="1794" y="1490" class="tiny">CAM-08</text>
+  <rect x="300" y="455" width="2000" height="970" rx="24" fill="url(#building)" stroke="#b7c9e7" stroke-width="5" filter="url(#shadow)"/>
+  <rect x="322" y="477" width="1956" height="926" rx="12" fill="url(#floor)" opacity=".9"/>
+  <text x="350" y="520" class="section">B · THE BANK / SHARED OBJECT BUILDING</text>
+  <text x="350" y="548" class="small">Rooms are grouped by source modules and state transitions. Corridors are conceptual transaction paths, not physical network topology.</text>
+  <rect x="1120" y="1402" width="360" height="24" fill="#17243a"/><use href="#door" x="1265" y="1395" width="70" height="30"/><text x="1132" y="1470" class="label" fill="#76b9ff">GATE S · AUTHORIZED ENTRY</text>
+  <rect x="1120" y="452" width="360" height="24" fill="#17243a"/><use href="#door" x="1265" y="445" width="70" height="30"/><text x="1135" y="430" class="label" fill="#ffd05d">GATE N · DEPLOYMENT EVIDENCE</text>
+  <rect x="298" y="900" width="24" height="270" fill="#17243a"/><use href="#door" x="292" y="1010" width="30" height="70"/><text transform="translate(270 1175) rotate(-90)" class="small">GATE W · OWNED POSITION</text>
+  <rect x="2278" y="900" width="24" height="270" fill="#17243a"/><use href="#door" x="2272" y="1010" width="30" height="70"/><text transform="translate(2340 1175) rotate(90)" class="small">GATE E · RECEIPT / ORACLE</text>
+  <rect x="360" y="590" width="310" height="260" rx="14" class="control-room"/>
+  <text x="385" y="625" class="room-title">B1 · SECURITY LOBBY</text><text x="385" y="650" class="tiny">admin.move · version.move</text>
+  <circle cx="410" cy="700" r="20" class="cap"/><text x="403" y="706" class="route-letter">A</text><text x="450" y="706" class="label">AdminCap</text>
+  <circle cx="410" cy="748" r="20" class="cap"/><text x="403" y="754" class="route-letter">G</text><text x="450" y="754" class="label">Acl</text>
+  <circle cx="410" cy="796" r="20" class="position"/><text x="403" y="802" class="route-letter">V</text><text x="450" y="802" class="label">VersionCap / Version</text>
+  <use href="#camera" x="620" y="610" width="45" height="45"/><use href="#alarm" x="610" y="790" width="56" height="56"/>
+  <rect x="700" y="590" width="310" height="260" rx="14" class="control-room"/>
+  <text x="725" y="625" class="room-title">B2 · RATE CONTROL</text><text x="725" y="650" class="tiny">global_config.move · constants.move</text>
+  <rect x="735" y="690" width="80" height="55" rx="8" class="config"/><text x="753" y="724" class="label">CFG</text><text x="835" y="708" class="label">GlobalConfig</text><text x="835" y="730" class="small">fee rates</text>
+  <path d="M735 770h215M735 790h160M735 810h190" stroke="#91edf4" stroke-width="5" opacity=".7"/>
+  <use href="#camera" x="950" y="610" width="45" height="45"/><use href="#alarm" x="940" y="790" width="56" height="56"/>
+  <rect x="1040" y="590" width="520" height="260" rx="16" class="vault-room"/>
+  <text x="1070" y="625" class="room-title" fill="#ffd36b">B3 · MAIN VAULT · Pool&lt;X,Y&gt;</text><text x="1070" y="650" class="tiny">pool.move · reserves · growth globals · current price / tick</text>
+  <circle cx="1300" cy="750" r="76" fill="#34251d" stroke="#e8b550" stroke-width="9"/><circle cx="1300" cy="750" r="55" fill="none" stroke="#ae7337" stroke-width="5"/><path d="M1300 690v120M1240 750h120" stroke="#ae7337" stroke-width="5"/>
+  <rect x="1070" y="690" width="130" height="52" rx="8" class="token"/><text x="1095" y="723" class="label">TOKEN X</text><text x="1075" y="765" class="tiny">reserve_x · fee_x</text>
+  <rect x="1400" y="690" width="130" height="52" rx="8" class="token"/><text x="1425" y="723" class="label">TOKEN Y</text><text x="1405" y="765" class="tiny">reserve_y · fee_y</text>
+  <text x="1070" y="820" class="small">Pool · total liquidity · protocol fees · flash fees</text>
+  <use href="#camera" x="1510" y="610" width="45" height="45"/><use href="#alarm" x="1500" y="790" width="56" height="56"/>
+  <rect x="1590" y="590" width="310" height="260" rx="14" class="room" fill="#30344e"/>
+  <text x="1615" y="625" class="room-title">B4 · POSITION LOCKERS</text><text x="1615" y="650" class="tiny">position.move · owned LP objects</text>
+  <rect x="1640" y="690" width="210" height="62" rx="8" class="position"/><text x="1710" y="720" class="label">Position</text><text x="1660" y="741" class="tiny">liquidity · lower / upper ticks</text>
+  <rect x="1640" y="775" width="210" height="42" rx="8" class="position"/><text x="1700" y="802" class="label">PositionRewardInfo</text><use href="#camera" x="1835" y="610" width="45" height="45"/>
+  <rect x="1930" y="590" width="310" height="260" rx="14" class="control-room"/>
+  <text x="1955" y="625" class="room-title">B5 · CONTROL ROOM</text><text x="1955" y="650" class="tiny">pause gates · package/version checks</text>
+  <rect x="1980" y="690" width="90" height="55" rx="8" class="cap"/><text x="1998" y="724" class="label">PAUSE</text><text x="2090" y="708" class="label">Trading toggle</text><text x="2090" y="730" class="small">admin paths</text>
+  <use href="#camera" x="2190" y="610" width="45" height="45"/><use href="#alarm" x="2180" y="790" width="56" height="56"/>
+  <rect x="350" y="885" width="1870" height="100" rx="12" class="corridor"/>
+  <text x="385" y="925" class="section" fill="#76b9ff">C · CENTRAL CORRIDOR / TRANSACTION BUS</text><text x="385" y="953" class="small">Checks and state transitions are encountered here: ownership → pool pairing → slippage → accounting → receipt consumption.</text>
+  <use href="#camera" x="2120" y="905" width="45" height="45"/><use href="#alarm" x="530" y="905" width="56" height="56"/>
+  <rect x="360" y="1015" width="360" height="300" rx="14" class="room" fill="#29414a"/>
+  <text x="385" y="1050" class="room-title">D1 · TRADING FLOOR</text><text x="385" y="1075" class="tiny">trade.move · swap math</text><path d="M410 1120h250M410 1145h190M410 1170h220" stroke="#91e4db" stroke-width="6" opacity=".7"/>
+  <text x="385" y="1220" class="label">SwapState</text><text x="385" y="1250" class="label">SwapStepComputations</text><text x="385" y="1280" class="small">fee growth · price limit · amount deltas</text><use href="#camera" x="670" y="1035" width="45" height="45"/><use href="#alarm" x="660" y="1240" width="56" height="56"/>
+  <rect x="750" y="1015" width="360" height="300" rx="14" class="room" fill="#30344e"/>
+  <text x="775" y="1050" class="room-title">D2 · FLASH DESK</text><text x="775" y="1075" class="tiny">trade.move · receipt lifecycle</text>
+  <rect x="800" y="1120" width="100" height="60" rx="8" class="cap"/><text x="822" y="1157" class="label">LOAN</text><text x="925" y="1145" class="label">FlashLoanReceipt</text><text x="925" y="1166" class="tiny">debt + pool ID</text>
+  <rect x="800" y="1210" width="100" height="60" rx="8" class="cap"/><text x="816" y="1247" class="label">SWAP</text><text x="925" y="1235" class="label">FlashSwapReceipt</text><text x="925" y="1256" class="tiny">repay / consume</text><use href="#camera" x="1060" y="1035" width="45" height="45"/><use href="#alarm" x="1050" y="1240" width="56" height="56"/>
+  <rect x="1140" y="1015" width="360" height="300" rx="14" class="room" fill="#3d3248"/>
+  <text x="1165" y="1050" class="room-title">D3 · REWARD CUSTODY</text><text x="1165" y="1075" class="tiny">reward.move · collect.move · dynamic fields</text>
+  <rect x="1190" y="1120" width="260" height="50" rx="8" class="asset"/><text x="1250" y="1152" class="label">PoolRewardInfo</text><rect x="1190" y="1195" width="260" height="50" rx="8" class="asset"/><text x="1262" y="1227" class="label">Reward Custodian DF</text>
+  <text x="1165" y="1280" class="small">emission rate · end time · reward growth · debt</text><use href="#camera" x="1450" y="1035" width="45" height="45"/><use href="#alarm" x="1440" y="1240" width="56" height="56"/>
+  <rect x="1530" y="1015" width="360" height="300" rx="14" class="room" fill="#2b3f57"/>
+  <text x="1555" y="1050" class="room-title">D4 · ORACLE ROOM</text><text x="1555" y="1075" class="tiny">oracle.move · observations</text>
+  <circle cx="1630" cy="1150" r="35" class="config"/><text x="1606" y="1156" class="label">OBS</text><text x="1690" y="1144" class="label">Observation</text><text x="1690" y="1166" class="tiny">timestamp / cumulative</text><rect x="1590" y="1210" width="220" height="48" rx="8" class="config"/><text x="1660" y="1240" class="label">cardinality / index</text>
+  <use href="#camera" x="1840" y="1035" width="45" height="45"/><use href="#alarm" x="1830" y="1240" width="56" height="56"/>
+  <rect x="1920" y="1015" width="300" height="300" rx="14" class="room" fill="#2c4056"/>
+  <text x="1945" y="1050" class="room-title">D5 · TICK ROOM</text><text x="1945" y="1075" class="tiny">tick.move · bitmap / crossing</text><rect x="1970" y="1120" width="200" height="50" rx="8" class="config"/><text x="2040" y="1152" class="label">TickInfo</text><rect x="1970" y="1195" width="200" height="50" rx="8" class="config"/><text x="2010" y="1227" class="label">Bitmap / spacing</text><text x="1945" y="1280" class="small">gross / net liquidity · boundaries</text>
+  <use href="#camera" x="2170" y="1035" width="45" height="45"/><use href="#alarm" x="2160" y="1240" width="56" height="56"/>
+  <rect x="360" y="1340" width="500" height="45" rx="9" class="paper"/><text x="385" y="1369" class="paper-text">E1 · EVIDENCE DESK — deployments / Move.lock / test results</text>
+  <rect x="890" y="1340" width="500" height="45" rx="9" class="paper"/><text x="915" y="1369" class="paper-text">E2 · ACCOUNTING LEDGER — owed fees / safe_withdraw / debt clearing</text>
+  <rect x="1420" y="1340" width="500" height="45" rx="9" class="paper"/><text x="1445" y="1369" class="paper-text">E3 · INCIDENT DESK — alarms / traces / caught or cleared</text>
+  <rect x="1950" y="1340" width="270" height="45" rx="9" class="paper"/><text x="1970" y="1369" class="paper-text">E4 · EXIT LOG</text>
+  <path d="M640 630L530 780H700Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff" stroke-dasharray="7 8"/><path d="M1870 630L1730 790H2010Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff" stroke-dasharray="7 8"/><path d="M2170 1040L2040 1190H2240Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff" stroke-dasharray="7 8"/><path d="M690 1040L570 1190H810Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff" stroke-dasharray="7 8"/>
+  <text x="350" y="1610" class="section">F · ROUTE PLANNING STRIP / SCENARIO TRACES</text><text x="350" y="1637" class="small">Routes model protocol call order and invariant checkpoints. A marker is a planned transaction step; an alarm is a failed guard or a suspected accounting mismatch.</text>
+  <path d="M270 1545L270 930L350 930L350 720L500 720L500 930L1030 930L1030 750L1300 750" class="route-a"/><circle cx="270" cy="1545" r="18" fill="#48e0af"/><text x="265" y="1551" class="route-letter">A</text><text x="285" y="1510" class="label" fill="#48e0af">A · AUTHORIZED SWAP</text>
+  <path d="M2330 1545L2330 930L2200 930L2200 720L1760 720L1760 930L920 930L920 1150" class="route-b"/><circle cx="2330" cy="1545" r="18" fill="#ffd05d"/><text x="2325" y="1551" class="route-letter">B</text><text x="2070" y="1510" class="label" fill="#ffd05d">B · POSITION / FEE COLLECTION</text>
+  <path d="M1300 420L1300 480L1300 590L1300 850L1300 930L850 930L850 1150" class="route-c"/><circle cx="1300" cy="420" r="18" fill="#ff6670"/><text x="1295" y="426" class="route-letter">C</text><text x="1325" y="458" class="label" fill="#ff6670">C · RECEIPT REPAYMENT CHECK</text>
+  <path d="M550 300L550 470L850 470L850 720L1300 720L1300 930L1320 930L1320 1150" class="route-d"/><circle cx="550" cy="300" r="18" fill="#76b9ff"/><text x="545" y="306" class="route-letter">D</text><text x="590" y="330" class="label" fill="#76b9ff">D · DEPLOYMENT / VERSION GATE</text>
+  <path d="M270 1080L350 1080L350 930L1300 930L1300 1150L1630 1150L1630 1250" class="route-e"/><circle cx="270" cy="1080" r="18" fill="#d09aff"/><text x="265" y="1086" class="route-letter">E</text><text x="285" y="1120" class="label" fill="#d09aff">E · ORACLE / TICK EDGE</text>
+  <path d="M2330 1080L2220 1080L2220 930L1300 930L1300 1150L1320 1150" class="route-f"/><circle cx="2330" cy="1080" r="18" fill="#ff9b55"/><text x="2325" y="1086" class="route-letter">F</text><text x="2070" y="1120" class="label" fill="#ff9b55">F · REWARD ACCOUNTING</text>
+  <path d="M1300 1450L1300 1390L1120 1390L1120 930L1300 930L1300 850" class="route-g"/><circle cx="1300" cy="1450" r="18" fill="#edf4ff"/><text x="1295" y="1456" class="route-letter">G</text><text x="1325" y="1480" class="label">G · CLEAN BASELINE TRACE</text>
+  <g transform="translate(820 930)"><circle r="17" class="asset"/><text x="-5" y="5" class="route-letter">1</text></g><text x="785" y="905" class="tiny">ownership</text><g transform="translate(1030 930)"><circle r="17" class="cap"/><text x="-5" y="5" class="route-letter">2</text></g><text x="990" y="905" class="tiny">pool ID</text><g transform="translate(1300 930)"><circle r="17" class="config"/><text x="-5" y="5" class="route-letter">3</text></g><text x="1260" y="905" class="tiny">slippage</text><g transform="translate(1580 930)"><circle r="17" class="position"/><text x="-5" y="5" class="route-letter">4</text></g><text x="1540" y="905" class="tiny">accounting</text><g transform="translate(1870 930)"><circle r="17" class="alarm"/><text x="-5" y="5" class="route-letter">5</text></g><text x="1840" y="905" class="tiny">assert / receipt</text>
+  <rect x="90" y="1655" width="820" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="120" y="1690" class="section">G · SCENARIO CARDS</text><text x="120" y="1722" class="label" fill="#48e0af">A1  CASHIER MISMATCH</text><text x="360" y="1722" class="small">safe_withdraw → fee/reward debt → actual transfer</text><text x="120" y="1752" class="label" fill="#ffd05d">A2  RECEIPT REPLAY</text><text x="360" y="1752" class="small">flash receipt → pool ID → repayment → consume</text><text x="120" y="1782" class="label" fill="#ff6670">A3  TICK / ORACLE EDGE</text><text x="360" y="1782" class="small">negative / boundary / sparse tick → observation read</text><text x="120" y="1812" class="label" fill="#d09aff">A4  REWARD DRIFT</text><text x="360" y="1812" class="small">emission update → rounding → custody → collect</text>
+  <rect x="940" y="1655" width="740" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="970" y="1690" class="section">SYMBOLS / SECURITY CAMERAS</text><use href="#cop" x="990" y="1730" width="45" height="57"/><text x="1035" y="1752" class="small">cop = authorization / invariant monitor</text><use href="#camera" x="990" y="1790" width="45" height="45"/><text x="1035" y="1812" class="small">camera = observable checkpoint / evidence capture</text><use href="#alarm" x="1390" y="1730" width="55" height="55"/><text x="1450" y="1752" class="small">alarm = abort / failed assertion</text><use href="#door" x="1390" y="1780" width="55" height="25"/><text x="1450" y="1800" class="small">door = module or capability boundary</text>
+  <rect x="1710" y="1655" width="820" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="1740" y="1690" class="section">COLOR KEY</text><circle cx="1755" cy="1730" r="10" class="asset"/><text x="1775" y="1735" class="small">green · custody / assets / rewards</text><circle cx="2010" cy="1730" r="10" class="cap"/><text x="2030" y="1735" class="small">gold · capabilities / fees</text><circle cx="2240" cy="1730" r="10" class="config"/><text x="2260" y="1735" class="small">cyan · config / oracle / ticks</text><circle cx="1755" cy="1770" r="10" class="position"/><text x="1775" y="1775" class="small">purple · positions / versions</text><circle cx="2010" cy="1770" r="10" class="alarm"/><text x="2030" y="1775" class="small">red · alarms / guards</text><rect x="2230" y="1760" width="20" height="18" class="paper"/><text x="2260" y="1775" class="small">paper · evidence / hypothesis</text><text x="1740" y="1812" class="tiny">Dashed routes are scenario traces; they describe protocol call order, not real-world instructions.</text>
+  <text x="74" y="1872" class="micro">MMT V3 CORE · visual audit artifact · source objects are grouped by room for planning clarity · no external image dependencies</text>
 </svg>
