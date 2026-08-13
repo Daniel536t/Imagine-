@@ -92,6 +92,15 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **The Manager's Key** — compare capability, ACL, version, pause, and administrative checks.
 - **The Records Mismatch** — compare deployment metadata, source package identity, and lockfile configuration.
 
+## Run 01 — Cashier Fee Collection
+
+- **Entrance:** Main Entrance / Gate S.
+- **Route:** Security Corridor → Cashier Floor → Accounting Office.
+- **Action:** generate a normal swap fee, crystallize the position claim, collect it once, then collect again.
+- **Observed result:** claim and returned coins matched in both token types; one collection event was emitted; the second collection returned zero.
+- **Outcome:** **PASS / no accounting mismatch demonstrated**.
+- **Board trace:** the black line now records this completed route. It is evidence of the run, not a future route proposal.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
