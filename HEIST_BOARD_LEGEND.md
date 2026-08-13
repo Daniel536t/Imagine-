@@ -95,10 +95,11 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 ## Run 01 — Cashier Fee Collection
 
 - **Entrance:** Main Entrance / Gate S.
-- **Route:** Security Corridor → Cashier Floor → Accounting Office.
+- **Route:** Gate S / Main Entrance → D3 Staff Room → D2 Loan Desk → D1 Cashier Floor → E2 Accounting Office.
 - **Action:** generate a normal swap fee, crystallize the position claim, collect it once, then collect again.
 - **Observed result:** claim and returned coins matched in both token types; one collection event was emitted; the second collection returned zero.
 - **Outcome:** **PASS / no accounting mismatch demonstrated**.
+- **Movie replay:** The front bell at Gate S gives one quiet note. The crew crosses into D3 Staff Room, passes the worker roster, and slips into D2 Loan Desk, where the repayment receipt is checked but never reused. They continue to D1 Cashier Floor, take the fee ledger to E2 Accounting Office, and find the numbers balanced. The cashier window closes; the second collection is silent. No real-world bank or funds are involved—this is a fictional protocol replay.
 - **Board trace:** the black line now records this completed route. It is evidence of the run, not a future route proposal.
 
 ## Black-trace protocol
