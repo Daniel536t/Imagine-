@@ -16,6 +16,7 @@
     <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff6670"/></marker>
     <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#48e0af"/></marker>
     <symbol id="cop" viewBox="-30 -38 60 76"><circle cy="-5" r="18" class="guard"/><path d="M-12 30Q0 5 12 30M-15-12H15" fill="none" stroke="#ffe0c8" stroke-width="5"/><rect x="-10" y="-31" width="20" height="8" rx="3" fill="#8fc1ff"/></symbol>
+    <symbol id="worker" viewBox="-26 -36 52 72"><circle cy="-14" r="11" fill="#f1c4aa" stroke="#ffe1cf" stroke-width="2"/><path d="M-16 30Q0 2 16 30" fill="#3977a8" stroke="#9dd1ff" stroke-width="3"/><path d="M-12-24H12" stroke="#d9a34b" stroke-width="5"/></symbol>
     <symbol id="camera" viewBox="-30 -30 60 60"><path d="M-22-10h27l12 10-12 10h-27z" class="camera"/><circle cx="-8" r="6" fill="#e7fcff"/><path d="M-24-18L-32-26M-24 18L-32 26" stroke="#8eeeff" stroke-width="3"/></symbol>
     <symbol id="alarm" viewBox="-45 -45 90 90"><path d="M0-26L-27 22H27Z" class="alarm"/><circle cy="-2" r="7" fill="#fff1a5"/><path d="M-38-33Q0-65 38-33M-45-49Q0-88 45-49" fill="none" stroke="#ff6a70" stroke-width="4"/></symbol>
     <symbol id="door" viewBox="0 0 70 30"><path d="M2 28V2h66v26" fill="none" stroke="#f8d17b" stroke-width="5"/><path d="M8 26L35 4M62 26L35 4" fill="none" stroke="#f8d17b" stroke-width="3"/></symbol>
@@ -35,13 +36,13 @@
   </defs>
   <rect width="2600" height="1900" fill="url(#bg)"/>
   <rect x="28" y="28" width="2544" height="1844" rx="28" fill="none" stroke="#354866" stroke-width="3"/>
-  <text x="74" y="78" class="headline">NIGHTGLASS · THE HOLLOW CITADEL</text>
-  <text x="74" y="108" class="subhead">FICTIONAL CHESS-STYLE MAP  ·  ROOMS, PASSAGES, WATCHERS, BELLS, AND STORES</text>
+  <text x="74" y="78" class="headline">NIGHTGLASS · THE FICTIONAL BANK</text>
+  <text x="74" y="108" class="subhead">FICTIONAL CHESS-STYLE BANK MAP  ·  ROOMS, STAFF, SECURITY, CAMERAS, ALARMS, AND THE VAULT</text>
   <rect x="2050" y="49" width="440" height="74" rx="14" fill="#15253d" stroke="#627da6" stroke-width="2"/>
   <text x="2080" y="78" class="small">SCENE STATUS</text><text x="2080" y="105" class="label" fill="#ffd36b">OPENING POSITION · CLEAR</text>
   <rect x="70" y="150" width="2460" height="1480" rx="24" fill="url(#yard)" stroke="#d19b45" stroke-width="5"/>
-  <text x="98" y="185" class="section" fill="#ffd36b">A · THE OUTER RING / FOUR APPROACHES</text>
-  <text x="98" y="212" class="small">The ring keeps the four approaches, the keeper posts, the sealed papers, and every doorway into the citadel.</text>
+  <text x="98" y="185" class="section" fill="#ffd36b">A · OUTSIDE THE BANK / FOUR APPROACHES</text>
+  <text x="98" y="212" class="small">The perimeter holds the streets, deliveries, staff doors, security posts, records, and every entrance into the bank.</text>
   <path d="M2380 240v70M2345 275h70" stroke="#ffd36b" stroke-width="4"/><text x="2368" y="230" class="north">N</text>
   <g opacity=".75">
     <path d="M160 250V1550M360 250V1550M560 250V1550M760 250V1550M960 250V1550M1160 250V1550M1360 250V1550M1560 250V1550M1760 250V1550M1960 250V1550M2160 250V1550M2360 250V1550" stroke="#d8b05c" stroke-opacity=".2" stroke-width="2"/>
@@ -49,84 +50,88 @@
     <text x="150" y="245" class="grid-label">A</text><text x="350" y="245" class="grid-label">B</text><text x="550" y="245" class="grid-label">C</text><text x="750" y="245" class="grid-label">D</text><text x="950" y="245" class="grid-label">E</text><text x="1150" y="245" class="grid-label">F</text><text x="1350" y="245" class="grid-label">G</text><text x="1550" y="245" class="grid-label">H</text><text x="1750" y="245" class="grid-label">I</text><text x="1950" y="245" class="grid-label">J</text><text x="2150" y="245" class="grid-label">K</text><text x="2350" y="245" class="grid-label">L</text>
     <text x="105" y="305" class="grid-label">1</text><text x="105" y="505" class="grid-label">2</text><text x="105" y="705" class="grid-label">3</text><text x="105" y="905" class="grid-label">4</text><text x="105" y="1105" class="grid-label">5</text><text x="105" y="1305" class="grid-label">6</text><text x="105" y="1505" class="grid-label">7</text>
   </g>
-  <rect x="105" y="230" width="2370" height="70" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text x="130" y="274" class="label">NORTH CAUSEWAY · sealed papers and old maps</text>
-  <rect x="105" y="1510" width="2370" height="70" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text x="130" y="1554" class="label">SOUTH CAUSEWAY · return lane and quiet exit</text>
-  <rect x="105" y="310" width="70" height="1180" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text transform="translate(148 1390) rotate(-90)" class="label">WEST CAUSEWAY · bearer tokens and keeper rites</text>
-  <rect x="2405" y="310" width="70" height="1180" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text transform="translate(2448 1390) rotate(-90)" class="label">EAST CAUSEWAY · echo stones and borrowed masks</text>
-  <use href="#cop" x="220" y="335" width="60" height="76"/><text x="184" y="425" class="tiny">WARDEN · IVORY KEY</text>
-  <use href="#cop" x="2270" y="335" width="60" height="76"/><text x="2234" y="425" class="tiny">WARDEN · CLOCK SEAL</text>
-  <use href="#cop" x="220" y="1390" width="60" height="76"/><text x="180" y="1480" class="tiny">WARDEN · TWIN SEAL</text>
-  <use href="#cop" x="2270" y="1390" width="60" height="76"/><text x="2226" y="1480" class="tiny">WARDEN · GLASS NEEDLE</text>
-  <use href="#alarm" x="400" y="335" width="90" height="90"/><text x="350" y="438" class="tiny">BELL · BROKEN OATH</text>
-  <use href="#alarm" x="2110" y="335" width="90" height="90"/><text x="2055" y="438" class="tiny">BELL · BORROWED MASK</text>
-  <use href="#camera" x="690" y="335" width="60" height="60"/><text x="654" y="410" class="tiny">WATCH-EYE · NORTH-1</text>
-  <use href="#camera" x="1830" y="335" width="60" height="60"/><text x="1794" y="410" class="tiny">WATCH-EYE · NORTH-2</text>
-  <use href="#camera" x="690" y="1410" width="60" height="60"/><text x="654" y="1490" class="tiny">WATCH-EYE · SOUTH-1</text>
-  <use href="#camera" x="1830" y="1410" width="60" height="60"/><text x="1794" y="1490" class="tiny">WATCH-EYE · SOUTH-2</text>
+  <rect x="105" y="230" width="2370" height="70" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text x="130" y="274" class="label">NORTH STREET · deliveries and records</text>
+  <rect x="105" y="1510" width="2370" height="70" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text x="130" y="1554" class="label">SOUTH STREET · customer entrance and exit</text>
+  <rect x="105" y="310" width="70" height="1180" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text transform="translate(148 1390) rotate(-90)" class="label">WEST STREET · staff entrance and deliveries</text>
+  <rect x="2405" y="310" width="70" height="1180" rx="12" fill="#111d31" stroke="#496384" stroke-width="2"/><text transform="translate(2448 1390) rotate(-90)" class="label">EAST STREET · camera access and loan desk</text>
+  <use href="#cop" x="220" y="335" width="60" height="76"/><text x="184" y="425" class="tiny">SECURITY · FRONT DOOR</text>
+  <use href="#cop" x="2270" y="335" width="60" height="76"/><text x="2234" y="425" class="tiny">SECURITY · MANAGER</text>
+  <use href="#cop" x="220" y="1390" width="60" height="76"/><text x="180" y="1480" class="tiny">SECURITY · VAULT TAG</text>
+  <use href="#cop" x="2270" y="1390" width="60" height="76"/><text x="2226" y="1480" class="tiny">SECURITY · PRICE LIMIT</text>
+  <use href="#alarm" x="400" y="335" width="90" height="90"/><text x="350" y="438" class="tiny">ALARM · FAILED CHECK</text>
+  <use href="#alarm" x="2110" y="335" width="90" height="90"/><text x="2055" y="438" class="tiny">ALARM · REPAYMENT</text>
+  <use href="#camera" x="690" y="335" width="60" height="60"/><text x="654" y="410" class="tiny">CAMERA · NORTH-1</text>
+  <use href="#camera" x="1830" y="335" width="60" height="60"/><text x="1794" y="410" class="tiny">CAMERA · NORTH-2</text>
+  <use href="#camera" x="690" y="1410" width="60" height="60"/><text x="654" y="1490" class="tiny">CAMERA · SOUTH-1</text>
+  <use href="#camera" x="1830" y="1410" width="60" height="60"/><text x="1794" y="1490" class="tiny">CAMERA · SOUTH-2</text>
   <rect x="300" y="455" width="2000" height="970" rx="24" fill="url(#building)" stroke="#b7c9e7" stroke-width="5" filter="url(#shadow)"/>
   <rect x="322" y="477" width="1956" height="926" rx="12" fill="url(#floor)" opacity=".9"/>
-  <text x="350" y="520" class="section">B · THE HOLLOW CITADEL</text>
-  <text x="350" y="548" class="small">The rooms are scattered through the keep; the passages show imagined movement between doors, stores, watchers, and bells.</text>
-  <rect x="1120" y="1402" width="360" height="24" fill="#17243a"/><use href="#door" x="1265" y="1395" width="70" height="30"/><text x="1132" y="1470" class="label" fill="#76b9ff">GATE S · THE SOUTH ARCH</text>
-  <rect x="1120" y="452" width="360" height="24" fill="#17243a"/><use href="#door" x="1265" y="445" width="70" height="30"/><text x="1135" y="430" class="label" fill="#ffd05d">GATE N · THE PAPER ARCH</text>
-  <rect x="298" y="900" width="24" height="270" fill="#17243a"/><use href="#door" x="292" y="1010" width="30" height="70"/><text transform="translate(270 1175) rotate(-90)" class="small">GATE W · THE KEEPER'S ARCH</text>
-  <rect x="2278" y="900" width="24" height="270" fill="#17243a"/><use href="#door" x="2272" y="1010" width="30" height="70"/><text transform="translate(2340 1175) rotate(90)" class="small">GATE E · THE ECHO ARCH</text>
-  <g id="ivory-foyer" transform="translate(-10 75) rotate(-3 515 720)"><rect x="360" y="590" width="310" height="260" rx="14" class="control-room"/>
-  <text x="385" y="625" class="room-title">B1 · IVORY FOYER</text><text x="385" y="650" class="tiny">the keeper's hall</text>
-  <circle cx="410" cy="700" r="20" class="cap"/><text x="403" y="706" class="fiction-letter">A</text><text x="450" y="706" class="label">Crown Token</text>
-  <circle cx="410" cy="748" r="20" class="cap"/><text x="403" y="754" class="fiction-letter">G</text><text x="450" y="754" class="label">Oath Ring</text>
-  <circle cx="410" cy="796" r="20" class="position"/><text x="403" y="802" class="fiction-letter">V</text><text x="450" y="802" class="label">Clock Seal</text>
-  <use href="#camera" x="620" y="610" width="45" height="45"/><use href="#alarm" x="610" y="790" width="56" height="56"/></g>
-  <g id="tuning-forge" transform="translate(65 -30) rotate(2 855 720)"><rect x="700" y="590" width="310" height="260" rx="14" class="control-room"/>
-  <text x="725" y="625" class="room-title">B2 · TUNING FORGE</text><text x="725" y="650" class="tiny">the forge's measures</text>
-  <rect x="735" y="690" width="80" height="55" rx="8" class="config"/><text x="753" y="724" class="label">DIAL</text><text x="835" y="708" class="label">Master Dial</text><text x="835" y="730" class="small">toll rhythm</text>
+  <text x="350" y="520" class="section">B · THE FICTIONAL BANK BUILDING</text>
+  <text x="350" y="548" class="small">Inside the building are the manager, security, workers, cashier tables, cameras, accounting, the vault, and places where a loophole may be recorded after a run.</text>
+  <rect x="1120" y="1402" width="360" height="24" fill="#17243a"/><use href="#door" x="1265" y="1395" width="70" height="30"/><text x="1132" y="1470" class="label" fill="#76b9ff">GATE S · MAIN ENTRANCE</text>
+  <rect x="1120" y="452" width="360" height="24" fill="#17243a"/><use href="#door" x="1265" y="445" width="70" height="30"/><text x="1135" y="430" class="label" fill="#ffd05d">GATE N · RECORDS ENTRANCE</text>
+  <rect x="298" y="900" width="24" height="270" fill="#17243a"/><use href="#door" x="292" y="1010" width="30" height="70"/><text transform="translate(270 1175) rotate(-90)" class="small">GATE W · STAFF ENTRANCE</text>
+  <rect x="2278" y="900" width="24" height="270" fill="#17243a"/><use href="#door" x="2272" y="1010" width="30" height="70"/><text transform="translate(2340 1175) rotate(90)" class="small">GATE E · LOAN / CAMERA ENTRANCE</text>
+  <rect x="360" y="590" width="310" height="260" rx="14" class="control-room"/>
+  <text x="385" y="625" class="room-title">B1 · SECURITY LOBBY</text><text x="385" y="650" class="tiny">manager's office &amp; security desk</text>
+  <circle cx="410" cy="700" r="20" class="cap"/><text x="403" y="706" class="fiction-letter">A</text><text x="450" y="706" class="label">MANAGER</text>
+  <circle cx="410" cy="748" r="20" class="cap"/><text x="403" y="754" class="fiction-letter">G</text><text x="450" y="754" class="label">SECURITY ROSTER</text>
+  <circle cx="410" cy="796" r="20" class="position"/><text x="403" y="802" class="fiction-letter">V</text><text x="450" y="802" class="label">ACCESS REGISTER</text>
+  <use href="#cop" x="565" y="700" width="48" height="61"/><text x="545" y="775" class="tiny">SECURITY OFFICER</text>
+  <use href="#camera" x="620" y="610" width="45" height="45"/><use href="#alarm" x="610" y="790" width="56" height="56"/>
+  <rect x="700" y="590" width="310" height="260" rx="14" class="control-room"/>
+  <text x="725" y="625" class="room-title">B2 · CASHIER TABLES</text><text x="725" y="650" class="tiny">cashier windows &amp; fee tables</text>
+  <rect x="735" y="690" width="80" height="55" rx="8" class="config"/><text x="753" y="724" class="label">RATE BOARD</text><text x="835" y="708" class="label">fee manager</text><text x="835" y="730" class="small">daily figures</text>
   <path d="M735 770h215M735 790h160M735 810h190" stroke="#91edf4" stroke-width="5" opacity=".7"/>
-  <use href="#camera" x="950" y="610" width="45" height="45"/><use href="#alarm" x="940" y="790" width="56" height="56"/></g>
-  <g id="amber-heart" transform="translate(0 60) rotate(-1 1300 720)"><rect x="1040" y="590" width="520" height="260" rx="16" class="vault-room"/>
-  <text x="1070" y="625" class="room-title" fill="#ffd36b">B3 · AMBER HEART</text><text x="1070" y="650" class="tiny">the heart's two wells · tide and pressure</text>
+  <use href="#camera" x="950" y="610" width="45" height="45"/><use href="#alarm" x="940" y="790" width="56" height="56"/>
+  <rect x="1040" y="590" width="520" height="260" rx="16" class="vault-room"/>
+  <text x="1070" y="625" class="room-title" fill="#ffd36b">B3 · MAIN VAULT</text><text x="1070" y="650" class="tiny">vault reserve rooms · cash and pressure</text>
   <circle cx="1300" cy="750" r="76" fill="#34251d" stroke="#e8b550" stroke-width="9"/><circle cx="1300" cy="750" r="55" fill="none" stroke="#ae7337" stroke-width="5"/><path d="M1300 690v120M1240 750h120" stroke="#ae7337" stroke-width="5"/>
-  <rect x="1070" y="690" width="130" height="52" rx="8" class="token"/><text x="1095" y="723" class="label">SUN WELL</text><text x="1075" y="765" class="tiny">sun water · tithe</text>
-  <rect x="1400" y="690" width="130" height="52" rx="8" class="token"/><text x="1425" y="723" class="label">MOON WELL</text><text x="1405" y="765" class="tiny">moon water · tithe</text>
-  <text x="1070" y="820" class="small">heart · tide · tithe · borrowed breath</text>
-  <use href="#camera" x="1510" y="610" width="45" height="45"/><use href="#alarm" x="1500" y="790" width="56" height="56"/></g>
-  <g id="mirror-lockers" transform="translate(-80 -40) rotate(3 1745 720)"><rect x="1590" y="590" width="310" height="260" rx="14" class="room" fill="#30344e"/>
-  <text x="1615" y="625" class="room-title">B4 · MIRROR LOCKERS</text><text x="1615" y="650" class="tiny">the numbered mirrors · bearer parcels</text>
-  <rect x="1640" y="690" width="210" height="62" rx="8" class="position"/><text x="1710" y="720" class="label">Mirror Shard</text><text x="1660" y="741" class="tiny">range · weight · boundary</text>
-  <rect x="1640" y="775" width="210" height="42" rx="8" class="position"/><text x="1700" y="802" class="label">Echo Ledger</text>  <use href="#camera" x="1835" y="610" width="45" height="45"/></g>
-  <g id="clocktower" transform="translate(35 85) rotate(-2 2085 720)"><rect x="1930" y="590" width="310" height="260" rx="14" class="control-room"/>
-  <text x="1955" y="625" class="room-title">B5 · CLOCKTOWER</text><text x="1955" y="650" class="tiny">sleep switch · seal checks</text>
-  <rect x="1980" y="690" width="90" height="55" rx="8" class="cap"/><text x="1998" y="724" class="label">SILENCE</text><text x="2090" y="708" class="label">market hush</text><text x="2090" y="730" class="small">keeper rites</text>
-  <use href="#camera" x="2190" y="610" width="45" height="45"/><use href="#alarm" x="2180" y="790" width="56" height="56"/></g>
+  <rect x="1070" y="690" width="130" height="52" rx="8" class="token"/><text x="1095" y="723" class="label">CASH ROOM A</text><text x="1075" y="765" class="tiny">reserve A · fees</text>
+  <rect x="1400" y="690" width="130" height="52" rx="8" class="token"/><text x="1425" y="723" class="label">CASH ROOM B</text><text x="1405" y="765" class="tiny">reserve B · fees</text>
+  <text x="1070" y="820" class="small">vault · reserves · fees · borrowed funds</text>
+  <use href="#camera" x="1510" y="610" width="45" height="45"/><use href="#alarm" x="1500" y="790" width="56" height="56"/>
+  <rect x="1590" y="590" width="310" height="260" rx="14" class="room" fill="#30344e"/>
+  <text x="1615" y="625" class="room-title">B4 · CUSTOMER LOCKERS</text><text x="1615" y="650" class="tiny">customer boxes &amp; claim papers</text>
+  <rect x="1640" y="690" width="210" height="62" rx="8" class="position"/><text x="1710" y="720" class="label">CUSTOMER FILE</text><text x="1660" y="741" class="tiny">range · balance · boundary</text>
+  <rect x="1640" y="775" width="210" height="42" rx="8" class="position"/><text x="1700" y="802" class="label">CLAIM LEDGER</text>  <use href="#camera" x="1835" y="610" width="45" height="45"/>
+  <rect x="1930" y="590" width="310" height="260" rx="14" class="control-room"/>
+  <text x="1955" y="625" class="room-title">B5 · MANAGER'S OFFICE</text><text x="1955" y="650" class="tiny">manager's keys · approval checks</text>
+  <rect x="1980" y="690" width="90" height="55" rx="8" class="cap"/><text x="1998" y="724" class="label">LOCKDOWN</text><text x="2090" y="708" class="label">trading pause</text><text x="2090" y="730" class="small">manager approvals</text>
+  <use href="#cop" x="2160" y="700" width="48" height="61"/><text x="2145" y="775" class="tiny">MANAGER</text>
+  <use href="#camera" x="2190" y="610" width="45" height="45"/><use href="#alarm" x="2180" y="790" width="56" height="56"/>
   <rect x="350" y="885" width="1870" height="100" rx="12" class="corridor"/>
-  <text x="385" y="925" class="section" fill="#76b9ff">C · THE BLUE HALL</text><text x="385" y="953" class="small">The hall carries five imagined tests: name → twin seal → tide mark → ledger → mask returned.</text>
+  <text x="385" y="925" class="section" fill="#76b9ff">C · SECURITY CORRIDOR</text><text x="385" y="953" class="small">Staff entry → security check → cashier tables → vault → accounting → exit.</text>
   <use href="#camera" x="2120" y="905" width="45" height="45"/><use href="#alarm" x="530" y="905" width="56" height="56"/>
-  <g id="tide-market" transform="translate(15 45) rotate(2 540 1165)"><rect x="360" y="1015" width="360" height="300" rx="14" class="room" fill="#29414a"/>
-  <text x="385" y="1050" class="room-title">D1 · TIDE MARKET</text><text x="385" y="1075" class="tiny">the current tables</text><path d="M410 1120h250M410 1145h190M410 1170h220" stroke="#91e4db" stroke-width="6" opacity=".7"/>
-  <text x="385" y="1220" class="label">Current Board</text><text x="385" y="1250" class="label">Tide Calculations</text><text x="385" y="1280" class="small">tide · limit · amount</text>  <use href="#camera" x="670" y="1035" width="45" height="45"/><use href="#alarm" x="660" y="1240" width="56" height="56"/></g>
-  <g id="borrowers-table" transform="translate(-45 -20) rotate(-2 930 1165)"><rect x="750" y="1015" width="360" height="300" rx="14" class="room" fill="#30344e"/>
-  <text x="775" y="1050" class="room-title">D2 · BORROWER'S TABLE</text><text x="775" y="1075" class="tiny">the borrowed-mask ceremony</text>
-  <rect x="800" y="1120" width="100" height="60" rx="8" class="cap"/><text x="822" y="1157" class="label">BORROW</text><text x="925" y="1145" class="label">Borrowing Token</text><text x="925" y="1166" class="tiny">debt + twin seal</text>
-  <rect x="800" y="1210" width="100" height="60" rx="8" class="cap"/><text x="816" y="1247" class="label">EXCHANGE</text><text x="925" y="1235" class="label">Exchange Token</text><text x="925" y="1256" class="tiny">return / vanish</text>  <use href="#camera" x="1060" y="1035" width="45" height="45"/><use href="#alarm" x="1050" y="1240" width="56" height="56"/></g>
-  <g id="garden-of-ash" transform="translate(70 55) rotate(2 1320 1165)"><rect x="1140" y="1015" width="360" height="300" rx="14" class="room" fill="#3d3248"/>
-  <text x="1165" y="1050" class="room-title">D3 · GARDEN OF ASH</text><text x="1165" y="1075" class="tiny">seed rites · gathering · hidden shelves</text>
-  <rect x="1190" y="1120" width="260" height="50" rx="8" class="asset"/><text x="1250" y="1152" class="label">Ash Seed Ledger</text><rect x="1190" y="1195" width="260" height="50" rx="8" class="asset"/><text x="1262" y="1227" class="label">Hidden Seed Vault</text>
-  <text x="1165" y="1280" class="small">seed pace · sunset · growth · due</text>  <use href="#camera" x="1450" y="1035" width="45" height="45"/><use href="#alarm" x="1440" y="1240" width="56" height="56"/></g>
-  <g id="timewell" transform="translate(-60 -35) rotate(-3 1710 1165)"><rect x="1530" y="1015" width="360" height="300" rx="14" class="room" fill="#2b3f57"/>
-  <text x="1555" y="1050" class="room-title">D4 · TIMEWELL</text><text x="1555" y="1075" class="tiny">the well of echoes</text>
-  <circle cx="1630" cy="1150" r="35" class="config"/><text x="1606" y="1156" class="label">ECHO</text><text x="1690" y="1144" class="label">Echo Stone</text><text x="1690" y="1166" class="tiny">hour marks · gathered tide</text><rect x="1590" y="1210" width="220" height="48" rx="8" class="config"/><text x="1660" y="1240" class="label">rings / pointer</text>
-  <use href="#camera" x="1840" y="1035" width="45" height="45"/><use href="#alarm" x="1830" y="1240" width="56" height="56"/></g>
-  <g id="boundary-garden" transform="translate(35 60) rotate(2 2070 1165)"><rect x="1920" y="1015" width="300" height="300" rx="14" class="room" fill="#2c4056"/>
-  <text x="1945" y="1050" class="room-title">D5 · BOUNDARY GARDEN</text><text x="1945" y="1075" class="tiny">stone path · crossings</text><rect x="1970" y="1120" width="200" height="50" rx="8" class="config"/><text x="2040" y="1152" class="label">Boundary Stone</text><rect x="1970" y="1195" width="200" height="50" rx="8" class="config"/><text x="2010" y="1227" class="label">Star Map / stride</text><text x="1945" y="1280" class="small">weight · counterweight · edge</text>
-  <use href="#camera" x="2170" y="1035" width="45" height="45"/><use href="#alarm" x="2160" y="1240" width="56" height="56"/></g>
-  <rect x="360" y="1340" width="500" height="45" rx="9" class="paper"/><text x="385" y="1369" class="paper-text">E1 · ARCHIVE OF PAPERS — sealed notes / lockbox / candle tests</text>
-  <rect x="890" y="1340" width="500" height="45" rx="9" class="paper"/><text x="915" y="1369" class="paper-text">E2 · LEDGER CHAMBER — owed tides / safe draw / clearing</text>
-  <rect x="1420" y="1340" width="500" height="45" rx="9" class="paper"/><text x="1445" y="1369" class="paper-text">E3 · BELL ARCHIVE — alarms / traces / caught or clear</text>
-  <rect x="1950" y="1340" width="270" height="45" rx="9" class="paper"/><text x="1970" y="1369" class="paper-text">E4 · RETURN REGISTER</text>
+  <rect x="360" y="1015" width="360" height="300" rx="14" class="room" fill="#29414a"/>
+  <text x="385" y="1050" class="room-title">D1 · CASHIER FLOOR</text><text x="385" y="1075" class="tiny">cashiers, workers, and customer tables</text>  <use href="#worker" x="555" y="1085" width="42" height="58"/><use href="#worker" x="620" y="1085" width="42" height="58"/><text x="410" y="1105" class="tiny">TABLE 01 · TABLE 02 · WORKERS</text><path d="M410 1120h250M410 1145h190M410 1170h220" stroke="#91e4db" stroke-width="6" opacity=".7"/>
+
+  <text x="385" y="1220" class="label">CASHIER LOG</text><text x="385" y="1250" class="label">COUNTING SHEETS</text><text x="385" y="1280" class="small">amounts · limits · change</text>  <use href="#camera" x="670" y="1035" width="45" height="45"/><use href="#alarm" x="660" y="1240" width="56" height="56"/>
+  <rect x="750" y="1015" width="360" height="300" rx="14" class="room" fill="#30344e"/>
+  <text x="775" y="1050" class="room-title">D2 · LOAN DESK</text><text x="775" y="1075" class="tiny">loan paperwork &amp; repayment</text>
+  <rect x="800" y="1120" width="100" height="60" rx="8" class="cap"/><text x="822" y="1157" class="label">LOAN</text><text x="925" y="1145" class="label">LOAN RECEIPT</text><text x="925" y="1166" class="tiny">debt + vault tag</text>
+  <rect x="800" y="1210" width="100" height="60" rx="8" class="cap"/><text x="816" y="1247" class="label">REPAY</text><text x="925" y="1235" class="label">REPAYMENT RECEIPT</text><text x="925" y="1256" class="tiny">return / file</text>  <use href="#camera" x="1060" y="1035" width="45" height="45"/><use href="#alarm" x="1050" y="1240" width="56" height="56"/>
+  <rect x="1140" y="1015" width="360" height="300" rx="14" class="room" fill="#3d3248"/>
+  <text x="1165" y="1050" class="room-title">D3 · STAFF ROOM</text><text x="1165" y="1075" class="tiny">worker roster &amp; payout cabinet</text>
+  <rect x="1190" y="1120" width="260" height="50" rx="8" class="asset"/><text x="1250" y="1152" class="label">WORKER PAYROLL</text><rect x="1190" y="1195" width="260" height="50" rx="8" class="asset"/><text x="1262" y="1227" class="label">PAYROLL SAFE</text>
+  <text x="1165" y="1280" class="small">wages · close time · accrual · due</text>  <use href="#camera" x="1450" y="1035" width="45" height="45"/><use href="#alarm" x="1440" y="1240" width="56" height="56"/>
+  <rect x="1530" y="1015" width="360" height="300" rx="14" class="room" fill="#2b3f57"/>
+  <text x="1555" y="1050" class="room-title">D4 · CAMERA ROOM</text><text x="1555" y="1075" class="tiny">camera logs &amp; time cards</text>
+  <circle cx="1630" cy="1150" r="35" class="config"/><text x="1606" y="1156" class="label">LOG</text><text x="1690" y="1144" class="label">CAMERA LOG</text><text x="1690" y="1166" class="tiny">timestamps · recorded movement</text><rect x="1590" y="1210" width="220" height="48" rx="8" class="config"/><text x="1660" y="1240" class="label">archive / index</text>
+  <use href="#camera" x="1840" y="1035" width="45" height="45"/><use href="#alarm" x="1830" y="1240" width="56" height="56"/>
+  <rect x="1920" y="1015" width="300" height="300" rx="14" class="room" fill="#2c4056"/>
+  <text x="1945" y="1050" class="room-title">D5 · BLIND-SPOT ROOM</text><text x="1945" y="1075" class="tiny">camera gaps · alternate doors</text><rect x="1970" y="1120" width="200" height="50" rx="8" class="config"/><text x="2040" y="1152" class="label">LOOPHOLE CARD</text>  <rect x="1970" y="1195" width="200" height="50" rx="8" class="config"/><text x="2010" y="1227" class="label">BLIND SPOTS / DISTANCE</text><text x="1945" y="1300" class="tiny">POST-RUN LOOPHOLE NOTES</text>
+<text x="1945" y="1280" class="small">risk · counter-risk · exit</text>
+  <use href="#camera" x="2170" y="1035" width="45" height="45"/><use href="#alarm" x="2160" y="1240" width="56" height="56"/>
+  <rect x="360" y="1340" width="500" height="45" rx="9" class="paper"/><text x="385" y="1369" class="paper-text">E1 · SECURITY OFFICE — incident notes / camera tapes / test reports</text>
+  <rect x="890" y="1340" width="500" height="45" rx="9" class="paper"/><text x="915" y="1369" class="paper-text">E2 · ACCOUNTING OFFICE — owed fees / safe withdrawals / clearing</text>
+  <rect x="1420" y="1340" width="500" height="45" rx="9" class="paper"/><text x="1445" y="1369" class="paper-text">E3 · INCIDENT BOARD — alarms / traces / caught or clear</text>
+  <rect x="1950" y="1340" width="270" height="45" rx="9" class="paper"/><text x="1970" y="1369" class="paper-text">E4 · EXIT REGISTER</text>
   <path d="M640 630L530 780H700Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff"/><path d="M1870 630L1730 790H2010Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff"/><path d="M2170 1040L2040 1190H2240Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff"/><path d="M690 1040L570 1190H810Z" fill="#73e8ff" opacity=".07" stroke="#73e8ff"/>  <rect x="320" y="1570" width="1900" height="70" rx="12" fill="#e9e2d0" stroke="#050505" stroke-width="3"/><text x="350" y="1598" class="trace-title">F · THE BLACK TRACE — DRAW AFTER THE RUN</text>
   <text x="350" y="1620" class="trace-note">Leave this line blank in your imagination; after a run, draw the path that actually happened and mark where the bell rang.</text><path d="M430 1628L610 1608L790 1630L980 1605L1180 1629L1380 1609L1580 1631L1790 1607L2010 1628" class="trace-line"/>
 
-  <rect x="90" y="1655" width="820" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="120" y="1690" class="section">G · TALES TO TEST</text><text x="120" y="1722" class="label" fill="#48e0af">A1  THE THIN PAYOUT</text><text x="360" y="1722" class="small">a promise cleared before the purse is full</text><text x="120" y="1752" class="label" fill="#ffd05d">A2  THE BORROWED MASK</text><text x="360" y="1752" class="small">a mask returns twice to the same doorway</text><text x="120" y="1782" class="label" fill="#ff6670">A3  THE EDGE OF TIME</text><text x="360" y="1782" class="small">a stone path meets the last echo</text><text x="120" y="1812" class="label" fill="#d09aff">A4  THE ASH DRIFT</text><text x="360" y="1812" class="small">seeds, sunset, ash, and the final gathering</text>
-  <rect x="940" y="1655" width="740" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="970" y="1690" class="section">SYMBOLS / WATCHERS AND BELLS</text><use href="#cop" x="990" y="1730" width="45" height="57"/><text x="1035" y="1752" class="small">watcher = a keeper of an unseen oath</text><use href="#camera" x="990" y="1790" width="45" height="45"/><text x="1035" y="1812" class="small">watch-eye = a place where a story can be remembered</text><use href="#alarm" x="1390" y="1730" width="55" height="55"/><text x="1450" y="1752" class="small">bell = the run stops or changes shape</text><use href="#door" x="1390" y="1780" width="55" height="25"/><text x="1450" y="1800" class="small">door = a threshold between imagined places</text>
-  <rect x="1710" y="1655" width="820" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="1740" y="1690" class="section">MARKS AND MATERIALS</text><circle cx="1755" cy="1730" r="10" class="asset"/><text x="1775" y="1735" class="small">green · living stores and hidden gardens</text><circle cx="2010" cy="1730" r="10" class="cap"/><text x="2030" y="1735" class="small">gold · keys, oaths, and tolls</text><circle cx="2240" cy="1730" r="10" class="config"/><text x="2260" y="1735" class="small">cyan · wells, stars, and measures</text><circle cx="1755" cy="1770" r="10" class="position"/><text x="1775" y="1775" class="small">purple · mirrors and clockwork</text><circle cx="2010" cy="1770" r="10" class="alarm"/><text x="2030" y="1775" class="small">red · bells and watchers</text><rect x="2230" y="1760" width="20" height="18" class="paper"/><text x="2260" y="1775" class="small">paper · rumors, maps, and clues</text><text x="1740" y="1812" class="tiny">The single black trace is the only planned line; draw it after the tale is run.</text>
-  <text x="74" y="1872" class="micro">NIGHTGLASS · fictional visual artifact · the legend keeps the hidden correspondence · no external image dependencies</text>
+  <rect x="90" y="1655" width="820" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="120" y="1690" class="section">G · TALES TO TEST</text><text x="120" y="1722" class="label" fill="#48e0af">A1  THE THIN PAYOUT</text><text x="360" y="1722" class="small">a promise cleared before the purse is full</text><text x="120" y="1752" class="label" fill="#ffd05d">A2  LOAN RECEIPT REPLAY</text><text x="360" y="1752" class="small">a loan receipt returns twice to the same doorway</text><text x="120" y="1782" class="label" fill="#ff6670">A3  THE EDGE OF TIME</text><text x="360" y="1782" class="small">a stone path meets the last echo</text><text x="120" y="1812" class="label" fill="#d09aff">A4  THE ASH DRIFT</text><text x="360" y="1812" class="small">seeds, sunset, ash, and the final gathering</text>
+  <rect x="940" y="1655" width="740" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="970" y="1690" class="section">SYMBOLS / SECURITY AND ALARMS</text><use href="#cop" x="990" y="1730" width="45" height="57"/><text x="1035" y="1752" class="small">security officer = authorization and invariant guard</text><use href="#camera" x="990" y="1790" width="45" height="45"/><text x="1035" y="1812" class="small">camera = an observable checkpoint and evidence point</text><use href="#alarm" x="1390" y="1730" width="55" height="55"/><text x="1450" y="1752" class="small">alarm = the run stops or changes shape</text><use href="#door" x="1390" y="1780" width="55" height="25"/><text x="1450" y="1800" class="small">door = a threshold between bank rooms</text>
+  <rect x="1710" y="1655" width="820" height="185" rx="14" fill="#14233a" stroke="#54739f" stroke-width="2"/><text x="1740" y="1690" class="section">BANK COLORS</text><circle cx="1755" cy="1730" r="10" class="asset"/><text x="1775" y="1735" class="small">green · customer funds and worker payouts</text><circle cx="2010" cy="1730" r="10" class="cap"/><text x="2030" y="1735" class="small">gold · manager keys, fees, and receipts</text><circle cx="2240" cy="1730" r="10" class="config"/><text x="2260" y="1735" class="small">cyan · cameras, records, and measures</text><circle cx="1755" cy="1770" r="10" class="position"/><text x="1775" y="1775" class="small">purple · customer files and access records</text><circle cx="2010" cy="1770" r="10" class="alarm"/><text x="2030" y="1775" class="small">red · alarms and security boundaries</text><rect x="2230" y="1760" width="20" height="18" class="paper"/><text x="2260" y="1775" class="small">paper · incident notes and loophole hypotheses</text><text x="1740" y="1812" class="tiny">The single black trace is the only planned line; draw it after the bank run is complete.</text>
+  <text x="74" y="1872" class="micro">NIGHTGLASS · fictional bank security artifact · post-run notes belong in the incident board · no external image dependencies</text>
 </svg>

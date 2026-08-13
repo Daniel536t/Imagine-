@@ -1,123 +1,120 @@
-# Nightglass — Hollow Citadel Alias Ledger
+# Nightglass — Fictional Bank Interior Legend
 
-The SVG is intentionally written as a fictional world so the map can be imagined freely. The names below are the private correspondence between the story and the MMT V3 review model.
+The SVG is intentionally a fictional **bank building**. It uses ordinary story objects—manager, security, workers, cashier tables, cameras, alarms, vaults, loopholes, and records—so the review can be imagined as a heist-board world. The technical correspondence stays here, not on the artwork.
 
-## How to read the map
+## How to read the board
 
-- **Columns A–L and rows 1–7** are the chess-style planning grid.
-- **Rooms are deliberately scattered and slightly turned** so the citadel feels like a place, not a dashboard or a symmetrical matrix.
-- **Watchers** are authorization or invariant monitors.
-- **Watch-eyes** are observable checkpoints where a trace can be remembered.
-- **Bells** are failed guards, invalid inputs, aborts, or suspected accounting inconsistencies.
-- **Doors and arches** are imagined boundaries between capabilities, ownership, package checks, and state transitions.
-- **The black trace** is the only route line. It is drawn after a scenario runs so we record what actually happened.
+- **A–L / 1–7** is the chess-style planning grid.
+- The rooms are aligned as a building floor plan; the bank interior is the stable baseline.
+- **Workers** are transaction actors or internal processing steps.
+- **The manager** is the administrative authority.
+- **Security officers** are authorization and invariant guards.
+- **Cameras** are observable checkpoints.
+- **Alarms** are failed checks, aborted scenarios, or detected inconsistencies.
+- **The vault** is shared custody and accounting state.
+- **Loophole cards** are hypotheses added after a run; they are not prewritten exploits.
+- **The black trace** is drawn after a scenario to show what was actually attempted.
 
-## Fictional alias mapping
+## Bank-object mapping
 
-| SVG name | Hidden review meaning |
+| SVG bank object | MMT review meaning |
 |---|---|
-| **Nightglass** | The fictional name for this visual review world |
-| **Hollow Citadel** | The complete MMT V3 shared-object system |
-| **Ivory Foyer** | `AdminCap`, `Acl`, `VersionCap`, and `Version` entry controls |
-| **Crown Token** | `AdminCap` |
-| **Oath Ring** | `Acl` |
-| **Clock Seal** | `VersionCap` / `Version` compatibility gate |
-| **Tuning Forge** | `GlobalConfig` and fee/spacing constants |
-| **Master Dial** | `GlobalConfig` |
-| **Amber Heart** | `Pool<X,Y>` shared pool state |
-| **Sun Well** | Token-X reserve and related fee custody |
-| **Moon Well** | Token-Y reserve and related fee custody |
-| **Mirror Lockers** | `Position` objects and LP range state |
-| **Mirror Shard** | A `Position` |
-| **Echo Ledger** | `PositionRewardInfo` and reward snapshots |
-| **Clocktower** | Pause gates and package/version control paths |
-| **Blue Hall** | The conceptual transaction/checkpoint corridor |
-| **Tide Market** | Swap/trade state and swap calculations |
-| **Current Board** | `SwapState` |
-| **Tide Calculations** | `SwapStepComputations` |
-| **Borrower's Table** | Flash-loan and flash-swap lifecycle |
-| **Borrowing Token** | `FlashLoanReceipt` |
-| **Exchange Token** | `FlashSwapReceipt` |
-| **Garden of Ash** | Reward custody, emission, and collection |
-| **Ash Seed Ledger** | `PoolRewardInfo` |
-| **Hidden Seed Vault** | Reward custodian dynamic field |
-| **Timewell** | Oracle observations and historical cumulative values |
-| **Echo Stone** | `Observation` |
-| **Boundary Garden** | Tick state, bitmap navigation, spacing, and crossings |
-| **Boundary Stone** | `TickInfo` |
-| **Star Map / stride** | Tick bitmap and tick spacing |
-| **Archive of Papers** | Deployment metadata, lockfiles, source configuration, and test evidence |
-| **Ledger Chamber** | Owed fees, rewards, safe withdrawal, actual transfer, and debt clearing |
-| **Bell Archive** | Alarm results, traces, and caught/cleared outcomes |
-| **Return Register** | Final scenario state and next investigation route |
-| **Ivory Key watcher** | ACL/role authorization monitor |
-| **Clock Seal watcher** | Version compatibility monitor |
-| **Twin Seal watcher** | Pool/position/receipt pairing monitor |
-| **Glass Needle watcher** | Slippage and price-limit monitor |
-| **Broken Oath bell** | Assertions, invalid ranges, pause checks, and arithmetic preconditions |
-| **Borrowed Mask bell** | Flash repayment and one-time receipt boundary |
+| **Fictional Bank Building** | The complete MMT V3 shared-object system |
+| **Security Lobby** | `AdminCap`, `Acl`, `VersionCap`, and `Version` entry controls |
+| **Manager** | `AdminCap` / administrative authority |
+| **Security Roster** | `Acl` roles and authorization relationships |
+| **Access Register** | `Version` / `VersionCap` compatibility checks |
+| **Cashier Tables** | `GlobalConfig`, fee rates, and spacing/validation controls |
+| **Rate Board** | `GlobalConfig` and fee configuration |
+| **Main Vault** | `Pool<X,Y>` shared pool state |
+| **Cash Room A** | Token-X reserve and associated fee custody |
+| **Cash Room B** | Token-Y reserve and associated fee custody |
+| **Customer Lockers** | `Position` objects and LP range state |
+| **Customer File** | One `Position` and its range/liquidity data |
+| **Claim Ledger** | Position fee/reward snapshots and owed amounts |
+| **Manager's Office** | Pause gates and package/version control paths |
+| **Security Corridor** | Conceptual transaction/checkpoint order |
+| **Cashier Floor** | Swap/trade state and swap calculations |
+| **Cashier Log** | `SwapState` |
+| **Counting Sheets** | `SwapStepComputations` and amount/fee calculations |
+| **Loan Desk** | Flash-loan and flash-swap lifecycle |
+| **Loan Receipt** | `FlashLoanReceipt` |
+| **Repayment Receipt** | `FlashSwapReceipt` or repayment evidence |
+| **Staff Room** | Reward custody, worker/payroll-style accounting, and collection |
+| **Worker Payroll** | `PoolRewardInfo`, reward growth, debt, and collection state |
+| **Payroll Safe** | Reward custodian dynamic field |
+| **Camera Room** | Oracle observations and historical records |
+| **Camera Log** | `Observation` and cumulative timestamp data |
+| **Blind-Spot Room** | Tick boundaries, bitmap movement, spacing, and loophole hypotheses |
+| **Loophole Card** | A post-run investigation hypothesis, not a confirmed vulnerability |
+| **Security Office** | Deployment metadata, lockfiles, source configuration, and test evidence |
+| **Accounting Office** | Owed fees, rewards, safe withdrawal, actual transfer, and debt clearing |
+| **Incident Board** | Alarm results, traces, and caught/cleared outcomes |
+| **Exit Register** | Final scenario state and the next route to test |
 
-## Fictional locations
+## Building perimeter
 
-### The Outer Ring
+- **North Street** — delivery and records approach.
+- **South Street** — customer entrance and exit.
+- **West Street** — staff entrance and deliveries.
+- **East Street** — camera access and loan desk.
+- **Main Entrance** — ordinary authorized entry.
+- **Records Entrance** — deployment/version evidence.
+- **Staff Entrance** — owned positions and capabilities.
+- **Loan / Camera Entrance** — receipt and observation paths.
 
-- **North Causeway** — sealed papers and old maps.
-- **South Causeway** — return lane and quiet exit.
-- **West Causeway** — bearer tokens and keeper rites.
-- **East Causeway** — echo stones and borrowed masks.
-- **South Arch** — authorized transaction entry.
-- **Paper Arch** — deployment and version evidence.
-- **Keeper's Arch** — owned position/capability boundary.
-- **Echo Arch** — receipt and observation boundary.
+## Interior staff and security
 
-### The inner rooms
+- **Manager** — administrative authority and manager-only transitions.
+- **Security Officer** — ACL, role, version, pool-pairing, and invariant checks.
+- **Workers** — named visual placeholders for transaction steps and internal processing.
+- **Cashiers** — swap/collection processing points.
+- **Cameras** — trace checkpoints and evidence locations.
+- **Alarms** — assertion failures, bad ranges, pause conditions, slippage failures, and repayment failures.
 
-1. **Ivory Foyer** — capability and authorization controls.
-2. **Tuning Forge** — configuration and fee/spacing controls.
-3. **Amber Heart** — two token wells, reserves, liquidity, price, fees, rewards, oracle, and tick state.
-4. **Mirror Lockers** — user positions, ranges, liquidity, owed fees, and reward snapshots.
-5. **Clocktower** — pause and compatibility controls.
-6. **Blue Hall** — the conceptual order of checks before and after a state transition.
-7. **Tide Market** — swap calculations, price limits, fee growth, and reserve movement.
-8. **Borrower's Table** — flash-loan and flash-swap debt/repayment lifecycle.
-9. **Garden of Ash** — reward emission, custody, growth, debt, and collection.
-10. **Timewell** — observation history, timestamps, cardinality, and interpolation.
-11. **Boundary Garden** — initialized ticks, bitmap movement, spacing, crossings, and liquidity changes.
-12. **Archive of Papers** — deployment/build/test evidence.
-13. **Ledger Chamber** — accounting reconciliation.
-14. **Bell Archive** — outcome recording.
-15. **Return Register** — the next route to test.
+## Post-run investigation board
 
-## The four fictional tales
+The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a local scenario runs, add a loophole card only when the evidence supports it. Each card should record:
 
-- **The Thin Payout** — compare a promise being cleared with the purse actually being transferred. This is the `safe_withdraw` / fee / reward accounting scenario.
-- **The Borrowed Mask** — check whether a flash token is bound to the right heart, repaid once, and gone afterward.
-- **The Edge of Time** — explore negative, boundary, sparse, and timestamp/cardinality cases around the Boundary Garden and Timewell.
-- **The Ash Drift** — compare emission updates, rounding, custody, reward debt, and final gathering.
+1. Which room and grid square were involved.
+2. Which worker, cashier, camera, or alarm was reached.
+3. The black-trace stopping point.
+4. The expected accounting invariant.
+5. The observed result.
+6. Whether the card is a confirmed issue, a blocked hypothesis, or a test gap.
 
-## The black trace protocol
+## Scenario names
 
-The board deliberately contains only one route line. After each local audit scenario:
+- **The Thin Payout** — compare accounting credit cleared with the actual amount transferred; this covers `safe_withdraw`, fees, and rewards.
+- **The Borrowed Mask** — verify loan/repayment receipts, pool pairing, one-time use, and exact repayment.
+- **The Edge of Time** — examine boundary, sparse, negative, and timestamp/cardinality cases in the camera and blind-spot rooms.
+- **The Worker Payroll Drift** — compare reward updates, rounding, custody, debt, and collection.
+- **The Manager's Key** — compare capability, ACL, version, pause, and administrative checks.
+- **The Records Mismatch** — compare deployment metadata, source package identity, and lockfile configuration.
 
-1. Start at the fictional entry arch.
-2. Follow the scenario's conceptual calls through the rooms.
-3. Mark each watcher, watch-eye, and bell encountered.
-4. Draw the actual path as one black line over the board.
-5. Record the stopping point in the Return Register.
-6. Add the result to the next tale without changing the fictional names on the SVG.
+## Black-trace protocol
 
-The black line is a record of what we tried, not a prewritten route.
+There is only one route line on the SVG, and it is black. After each local review run:
+
+1. Start at the relevant entrance.
+2. Move through the bank rooms in the order the scenario actually uses.
+3. Note each worker, cashier, camera, and alarm encountered.
+4. Draw the actual path on the black trace.
+5. Record the stopping point on the Incident Board.
+6. Add a Loophole Card only if the evidence justifies it.
+
+The line is a record of what happened—not a prewritten plan.
 
 ## Material key
 
-- **Green** — living stores, custody, rewards, and accounting value.
-- **Gold** — keys, oaths, tolls, and borrowed obligations.
-- **Cyan** — wells, stars, time, and measures.
-- **Purple** — mirrors and clockwork.
-- **Blue** — ordinary stores and flow.
-- **Red** — bells and watchers.
-- **Paper** — rumors, maps, clues, and evidence.
+- **Green** — customer funds, worker payouts, rewards, and accounting value.
+- **Gold** — manager keys, security authority, fees, and receipts.
+- **Cyan** — cameras, records, measurements, and configuration.
+- **Purple** — customer lockers and access/version records.
+- **Blue** — ordinary reserves and bank flow.
+- **Red** — alarms and security boundaries.
+- **Paper** — evidence, incident notes, and hypotheses.
 
 ## Scope note
 
-This is a fictional visualization layer over a local protocol-security review. The alias names are for imagination; the mapping above preserves the technical meaning for analysis. The board does not represent a real-world bank or a physical attack plan.
+This is a fictional visualization layer over a local protocol-security review. It is not a real bank layout or a physical attack plan. The bank objects are storytelling metaphors; the mapping above preserves the technical meaning for analysis.
