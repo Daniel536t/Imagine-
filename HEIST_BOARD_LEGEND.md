@@ -102,6 +102,18 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Movie replay:** The front bell at Gate S gives one quiet note. The crew crosses into D3 Staff Room, passes the worker roster, and slips into D2 Loan Desk, where the repayment receipt is checked but never reused. They continue to D1 Cashier Floor, take the fee ledger to E2 Accounting Office, and find the numbers balanced. The cashier window closes; the second collection is silent. No real-world bank or funds are involved—this is a fictional protocol replay.
 - **Board trace:** the black line now records this completed route. It is evidence of the run, not a future route proposal.
 
+## Run 02 — The Loan Receipt
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S / Main Entrance → D3 Staff Room / Worker Payroll → D2 Loan Desk → E2 Accounting Office.
+- **Action:** create a controlled `FlashLoanReceipt`, calculate principal plus fee, repay exactly, then exercise one-unit-underpayment cases for both flash-loan and flash-swap receipts.
+- **Observed result:** exact repayment increased each reserve by exactly its calculated fee; one-unit underpayment aborted for both receipt types.
+- **Outcome:** **PASS / repayment boundary held; no reserve loss demonstrated**.
+- **Alarms:** the short-repayment checks tripped as expected. The transaction did not complete with insufficient funds.
+- **Movie replay:** At Gate S, the crew crosses the payroll room without opening the safe. At D2, the clerk issues a loan receipt stamped with the pool’s identity and the fee due. In E2, the exact repayment restores the vault and leaves only the fee behind. A second envelope arrives one coin short; the alarm rings, the scene rewinds, and the vault is unchanged.
+- **Scope limit:** this run did not claim to prove receipt replay or cross-pool misuse. Those remain separate tests because the existing Move resource and pool-identity checks must be demonstrated explicitly.
+- **Board trace:** the black line now records Run 02 and ends at the accounting office. The previous Run 01 path is retained in this legend as historical evidence, not as a second SVG route.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
