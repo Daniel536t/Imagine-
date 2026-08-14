@@ -158,6 +158,17 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Scope limit:** this run covered start/end timing and partial removal. Multi-reward ordering and clock-boundary rounding remain separate tests.
 - **Board trace:** the black line now records Run 06 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
 
+## Run 07 — The Twin Payroll Clock
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S → D3 Staff Room / Worker Payroll → D4 Camera Room → B3 Main Vault → E2 Accounting Office.
+- **Action:** initialize SUI and USDC reward streams together, collect them in opposite orders, and test the 1,999 ms / 1 ms clock boundary plus exact end and post-end behavior.
+- **Observed result:** both reward indexes remained independent; the 1,999 ms step created no extra emission second; the next millisecond created exactly one; exact-end claims paid correctly and post-end claims were zero.
+- **Outcome:** **PASS / no reward-index crossover, rounding overpayment, or post-end emission demonstrated**.
+- **Movie replay:** Two payroll clocks hang above the workers’ desks. One loses a millisecond but not a second. The clerks collect the silver ledger before the gold ledger, then reverse the order at closing. Both clocks stop together, and the accounting office finds the envelopes exact.
+- **Scope limit:** this run covered two reward indexes and second-based clock rounding. Larger reward vectors, tiny per-second emissions, and cumulative long-duration rounding remain separate tests.
+- **Board trace:** the black line now records Run 07 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
