@@ -136,6 +136,17 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Scope limit:** this run covered fee claims and partial liquidity removal. Reward-custodian timing, tick-crossing boundaries, and clock advancement remain separate tests.
 - **Board trace:** the black line now records Run 04 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
 
+## Run 05 — The Blind-Spot Boundary
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S → D1 Cashier Floor → D5 Blind-Spot Room → B3 Main Vault → E2 Accounting Office.
+- **Action:** place one position above the shared boundary and one below it, move the price to the boundary, then move below it and collect both claims.
+- **Observed result:** both positions retained fees accrued up to the boundary; after crossing below it, the upper-range claim stopped increasing and the lower-range claim increased. Each collected exactly its recorded claim.
+- **Outcome:** **PASS / tick-boundary fee allocation matched the exercised range semantics; no value mismatch demonstrated**.
+- **Movie replay:** The camera watches two workers standing on opposite sides of the same line. At the line, both ledgers retain what was earned before the crossing. Once the price slips below it, the upper worker leaves the earning floor and the lower worker takes over. E2 checks both envelopes and finds no missing coin.
+- **Scope limit:** this run covered fee growth and tick crossing. Reward-custodian timing and clock advancement remain separate tests.
+- **Board trace:** the black line now records Run 05 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
