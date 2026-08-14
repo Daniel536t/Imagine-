@@ -169,6 +169,18 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Scope limit:** this run covered two reward indexes and second-based clock rounding. Larger reward vectors, tiny per-second emissions, and cumulative long-duration rounding remain separate tests.
 - **Board trace:** the black line now records Run 07 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
 
+## Run 08 — The Dust Ledger · Confirmed Finding
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S → D3 Staff Room / Worker Payroll → D4 Camera Room → B3 Main Vault → E2 Accounting Office.
+- **Action:** compare two economically identical pools with the same one-unit reward over 100 seconds: one public collection at the end versus one public `collect::reward` call per second.
+- **Observed result:** the single-collection path paid **999,999** base units; the per-second public-collection path paid **999,900**. Both paths reported **1,000,000** units allocated.
+- **Outcome:** **CONFIRMED ROUNDING LOSS / 99 base units**. This is a reachable accounting discrepancy, not a theoretical concern. For a six-decimal token, the demonstrated difference is `0.000099` token units.
+- **Movie replay:** The long ledger is opened once at closing and returns almost every coin. The second ledger is opened every second; each opening rounds down a sliver. The allocation book still says the full million was assigned, but the worker’s envelope is 99 units short.
+- **Technical location:** repeated public `collect::reward` calls invoke reward growth updates whose flooring compounds across intervals. The proof uses no admin action after reward setup and no external funds.
+- **Triage note:** the demonstrated loss is dust-sized in this fixture, but the report should assess whether larger liquidity, longer emissions, more positions, or more frequent public updates amplify it.
+- **Board trace:** the black line now records Run 08 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
