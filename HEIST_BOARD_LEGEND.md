@@ -181,6 +181,17 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Triage note:** the demonstrated loss is dust-sized in this fixture, but the report should assess whether larger liquidity, longer emissions, more positions, or more frequent public updates amplify it.
 - **Board trace:** the black line now records Run 08 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
 
+## Run 09 — The Dust Ledger Amplified · Confirmed Finding
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S → D3 Staff Room / Worker Payroll → D4 Camera Room → B3 Main Vault → E2 Accounting Office.
+- **Action:** repeat Run 08 with a 1,000-second emission while comparing one public collection at the end against one public collection every second.
+- **Observed result:** the end-period path paid **999,999** base units; the per-second path paid **999,000**. Both paths allocated **1,000,000** units.
+- **Outcome:** **CONFIRMED AMPLIFIED ROUNDING LOSS / 999 base units**. The loss increased from 99 units in the 100-second run to 999 units in the 1,000-second run.
+- **Movie replay:** The short shift left 99 grains on the floor. The long shift repeats the same rounding at every bell, leaving 999 grains behind while the allocation ledger insists the full sack was assigned.
+- **Technical significance:** the discrepancy is reachable through repeated public `collect::reward` calls and scales with emission duration. Impact still requires assessment across token decimals, liquidity, number of positions, and realistic emission parameters.
+- **Board trace:** the black line now records Run 09 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
