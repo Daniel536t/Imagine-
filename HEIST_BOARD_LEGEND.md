@@ -125,6 +125,17 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Scope limit:** this run exercised fee accounting only. Reward emission timing, clock changes, and partial liquidity removal remain separate unrun branches.
 - **Board trace:** the black line now records Run 03 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
 
+## Run 04 — The Vault Exit
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S → D1 Cashier Floor → B3 Main Vault → E2 Accounting Office.
+- **Action:** create two identical positions, generate fees, then compare `collect → remove half` with `remove half → collect`.
+- **Observed result:** both positions received their complete fee claims, and final reserves equaled initial reserves minus liquidity withdrawals and fee payouts.
+- **Outcome:** **PASS / no reserve drain or claim loss demonstrated**.
+- **Movie replay:** The crew reaches the vault with two matching ledgers. Worker A collects before opening the inner door; Worker B opens the door before collecting. E2 subtracts every returned coin from the vault record and finds the same balance either way. The vault door closes without a missing token.
+- **Scope limit:** this run covered fee claims and partial liquidity removal. Reward-custodian timing, tick-crossing boundaries, and clock advancement remain separate tests.
+- **Board trace:** the black line now records Run 04 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
