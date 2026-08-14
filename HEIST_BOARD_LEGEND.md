@@ -147,6 +147,17 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Scope limit:** this run covered fee growth and tick crossing. Reward-custodian timing and clock advancement remain separate tests.
 - **Board trace:** the black line now records Run 05 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
 
+## Run 06 — The Timekeeper’s Payroll
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S → D3 Staff Room / Worker Payroll → D4 Camera Room → B3 Main Vault → E2 Accounting Office.
+- **Action:** seed a fixed reward, test a pre-start claim, add a second position mid-emission, partially remove it, collect at the exact end, and collect again after the end.
+- **Observed result:** pre-start and post-end collections returned zero; both claims survived timing and partial removal; payouts matched recorded reward debt; total payout stayed within the seeded reward amount.
+- **Outcome:** **PASS / no reward overpayment, claim loss, or post-end emission demonstrated**.
+- **Movie replay:** The timekeeper keeps the payroll safe sealed until the bell. One worker arrives early, another joins halfway through, and one leaves before closing. At the final bell, both envelopes match their ledgers. After closing, the empty windows stay empty.
+- **Scope limit:** this run covered start/end timing and partial removal. Multi-reward ordering and clock-boundary rounding remain separate tests.
+- **Board trace:** the black line now records Run 06 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
