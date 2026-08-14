@@ -114,6 +114,17 @@ The **Blind-Spot Room** is intentionally empty of confirmed weaknesses. After a 
 - **Scope limit:** this run did not claim to prove receipt replay or cross-pool misuse. Those remain separate tests because the existing Move resource and pool-identity checks must be demonstrated explicitly.
 - **Board trace:** the black line now records Run 02 and ends at the accounting office. The previous Run 01 path is retained in this legend as historical evidence, not as a second SVG route.
 
+## Run 03 — The Payroll Shuffle
+
+- **Entrance:** Gate S / Main Entrance.
+- **Route:** Gate S → D3 Staff Room / Worker Payroll → D1 Cashier Floor → D4 Camera Room → D5 Blind-Spot Room → E2 Accounting Office.
+- **Action:** create two positions with the same range, generate fees with a swap, collect A then B, generate fees again, and collect B then A.
+- **Observed result:** each position received exactly its own crystallized claim in both collection orders. No claim was cleared without its matching payout.
+- **Outcome:** **PASS / collection order did not alter accounting; no value mismatch demonstrated**.
+- **Movie replay:** The crew passes the payroll safe without opening it. At the cashier floor, two workers receive identical claim slips. The first shuffle sends Worker A to the window before Worker B; the second sends B before A. The cameras compare both ledgers, and E2 finds the same sums in either order.
+- **Scope limit:** this run exercised fee accounting only. Reward emission timing, clock changes, and partial liquidity removal remain separate unrun branches.
+- **Board trace:** the black line now records Run 03 and ends at the accounting office. Earlier runs remain documented above as historical evidence.
+
 ## Black-trace protocol
 
 There is only one route line on the SVG, and it is black. After each local review run:
